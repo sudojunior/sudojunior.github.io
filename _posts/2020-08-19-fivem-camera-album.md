@@ -32,4 +32,4 @@ This will take all files without an extension to where your terminal is currentl
 
 > *The reason it's two is because I can't get powershell to accept the new destination as a unique filename...*
 
-![FiveM Photo Album Copy]({{ site.baseurl }}/assets/fivem-album-result.png)
+![FiveM Photo Album Copy]({{ site.baseurl }}/assets/images/fivem-album-result.png)

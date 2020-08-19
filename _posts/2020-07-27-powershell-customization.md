@@ -28,7 +28,7 @@ I would recommend reading this gist about how to configure PowerShell for this m
 > *Just because it looks better from my perspective! 😎*
 > https://aka.ms/terminal
 
-![Agnoster in Windows Terminal]({{ site.baseurl }}/assets/agnoster-terminal.png)
+![Agnoster in Windows Terminal]({{ site.baseurl }}/assets/images/agnoster-terminal.png)
 
 ### A list of fonts I recommend from powerline fonts
 
