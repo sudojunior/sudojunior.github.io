@@ -2,7 +2,7 @@
 layout: post
 title: "Powershell Customization (and some extras)"
 date: 2020-07-27 20:55:00 +0100
-categories: powershell terminal aesthetics
+categories: aesthetics
 ---
 1. Navigate to `%USERPROFILE%\Documents\WindowsPowershell` *this can be run in Win+R* or use `ii $env:USERPROFILE\Documents\WindowsPowershell` in your powershell console.  
   *If the folder doesn't exist, navigate to the Documents folder on the user scope; create and open it.*
