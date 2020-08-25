@@ -33,3 +33,5 @@ This will take all files without an extension to where your terminal is currentl
 > *The reason it's two is because I can't get powershell to accept the new destination as a unique filename...*
 
 ![FiveM Photo Album Copy]({{ site.baseurl }}/assets/images/fivem-album-result.png)
+
+*If files aren't rendered as an image after doing this, use a tool like Irfanview to reformat the file(s) as .jpg. Basically overwrite and save the existing data.*
