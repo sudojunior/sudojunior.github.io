@@ -7,6 +7,8 @@ categories: fivem
 
 > Specifically for windows (and linux subsystem if you want to use it), other operating systems may behave differently.
 
+*This guide was written for those that may have been unable to use [gta5view](https://lmgtfy.com/?q=gta5view).*
+
 1. Take a photo as you normally would... or many.
 2. Close the game when you want to look at the photos.
 3. Navigate to `%USERPROFILE%\Saved Games\CitizenFX\GTA5`.  
@@ -32,6 +34,6 @@ This will take all files without an extension to where your terminal is currentl
 
 > *The reason it's two is because I can't get powershell to accept the new destination as a unique filename...*
 
-![FiveM Photo Album Copy]({{ site.baseurl }}/assets/images/fivem-album-result.png)
-
 *If files aren't rendered as an image after doing this, use a tool like Irfanview to reformat the file(s) as .jpg. Basically overwrite and save the existing data.*
+
+![FiveM Photo Album Copy]({{ site.baseurl }}/assets/images/fivem-album-result.png)
