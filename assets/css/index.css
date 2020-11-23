@@ -56,6 +56,10 @@ article a:first-of-type, .project {
   text-decoration: none !important;
 }
 
+.no-decor, .no-decor * {
+  text-decoration: none !important;
+}
+
 .page {
   margin: 0 80px;
 }
