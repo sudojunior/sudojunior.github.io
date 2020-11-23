@@ -1,0 +1,35 @@
+<html>
+
+<head profile="https://www.w3.org/2005/10/profile">
+  <title>@{{ site.title | downcase }} ${% if page.title %}{{ page.title | strip_html }}{% endif %}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Scripts and Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | absolute_url }}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap">
+
+  <script src="{{ '/assets/js/index.js' | absolute_url }}"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+</head>
+
+<body>
+  <nav>
+    <span class="prompt title"><span class="cmd"><b>sudo</b> begin --as junior</span></span>
+    <ul>
+      {% for el in site.data.links.navbar reversed %}
+      <li>
+        <a {% if page.url == el.target %}class="active"{% endif %} href="{{ el.target | absolute_url }}">{{ el.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  {{ content }}
+
+  {% include footer.html %}
+</body>
+
+</html>

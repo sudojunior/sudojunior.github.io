@@ -1,0 +1,15 @@
+<footer>
+  <ul class="center uber">
+    {%- for social in site.data.links.socials -%}
+    <li>
+      <a href="{{ social.link }}" aria-label="{{ social.handle }}">
+        <span class="iconify" data-icon="{{ social.icon }}" data-inline="true"></span>
+      </a>
+    </li>
+    {%- endfor -%}
+  </ul>
+  <p class="center">
+    Website created from scratch with help from W3Schools, built with <a href="https://jekyllrb.com">Jekyll</a>, hosted
+    by <a href="https://github.com/">GitHub</a>.
+  </p>
+</footer>

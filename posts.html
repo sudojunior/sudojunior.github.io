@@ -1,0 +1,18 @@
+---
+layout: page
+title: Posts
+---
+<div>
+  <p>Do I know what I'm doing?</p>
+  <blockquote>Hahaha... no. I haven't the faintest idea.</blockquote>
+</div>
+
+{% for post in site.posts %}
+<article>
+  <a href="{{ post.url }}">
+    <h3 class="{% cycle "red", "orange", "yellow", "green", "blue", "purple", "pink" %} prompt cmd" data-interval="{{ post.title.size | times: 0.8 }}" data-delay="{{ forloop.index }}"> {{ post.title }}</h3>
+  </a>
+  <p>{{ post.content | strip_html | truncate: 400, "..." }}</p>
+  <a href="{{ post.url }}">Read more...</a>
+</article>
+{% endfor %}

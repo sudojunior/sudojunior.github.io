@@ -26,7 +26,7 @@ I would recommend reading this gist about how to configure PowerShell for this m
 
 > Also, get Windows Terminal from MS Store... it allows for flow between each 'shell' (powershell, cmd, bash, etc.).
 > *Just because it looks better from my perspective! 😎*
-> https://aka.ms/terminal
+> [aka.ms/terminal](https://aka.ms/terminal)
 
 ![Agnoster in Windows Terminal]({{ site.baseurl }}/assets/images/agnoster-terminal.png)
 

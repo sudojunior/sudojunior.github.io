@@ -1,0 +1,12 @@
+---
+layout: page
+title: ./projects.exe
+---
+
+{% for project in site.data.links.projects %}
+<article>
+  <a href="{{ project.target }}">
+    <h3 class="prompt cmd project {% cycle 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink' %}">{{ project.label }}</h3>
+  </a>
+</article>
+{% endfor %}

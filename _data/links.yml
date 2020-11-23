@@ -1,0 +1,53 @@
+socials:
+  # - handle: sudojunior#8318
+  #   link: https://discord.com/app
+  #   icon: mdi:discord
+  
+  - handle: "@sudojunior"
+    link: https://github.com/sudojunior
+    icon: mdi:github
+  
+  - handle: sudojunior
+    link: https://steamcommunity.com/id/sudojunior
+    icon: mdi:steam
+
+  - handle: "@SudoJunior"
+    link: https://twitter.com/sudojunior
+    icon: mdi:twitter
+
+  - handle: SudoJunior
+    link: https://twitch.tv/sudojunior
+    icon: mdi:twitch
+
+  - # handle: Junior
+    link: https://www.youtube.com/channel/UCY8n396MVrnvZILI0EWjCWA
+    icon: mdi:youtube-gaming
+
+navbar:
+  - label: ./home.sh
+    target: /
+
+  # - label: ./about.md
+  #   target: /about/
+
+  - label: ./projects.exe
+    target: /projects/
+  
+  - label: /posts.jekyll
+    target: /posts/
+
+projects:
+  - label: gh repo show ~/journey
+    target: https://github.com/sudojunior/journey
+  
+  - label: gh repo show ~/tycoon-research
+    target: https://github.com/sudojunior/tycoon-research
+  
+  - label: "gh repo clone channel-backup --as @TinkerStorm"
+    target: https://github.com/TinkerStorm/channel-backup
+  
+  - label: gh repo show ~/TagSpace
+    target: https://github.com/sudojunior/TagSpace
+
+  - label: ssh login frllc_website:22
+    target: https://frllc.xyz/

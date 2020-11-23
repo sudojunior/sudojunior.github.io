@@ -1,0 +1,34 @@
+# Based on the primer color system
+# https://primer.style/css/support/color-system
+
+# Only includes the primary colors, {{ label }}-500 as reference
+
+- label: grey
+  code: "#6a737d"
+
+- label: blue
+  code: "#0366d6"
+
+- label: green
+  code: "#28a745"
+
+- label: purple
+  code: "#6f42c1"
+
+- label: yellow
+  code: "#ffd33d"
+
+- label: orange
+  code: "#f66a0a"
+
+- label: red
+  code: "#d73a49"
+
+- label: pink
+  code: "#ea4aaa"
+
+- label: black
+  code: "#24292e"
+
+- label: white
+  code: "#fafbfc"

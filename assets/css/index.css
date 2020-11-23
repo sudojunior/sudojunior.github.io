@@ -1,0 +1,120 @@
+---
+
+---
+
+* {
+  color: #7cfc00;
+  background-color: #24292e;
+  font-family: Roboto Mono, monospace;
+}
+
+.prompt {
+  padding: 10px;
+}
+
+.prompt::before {
+  content: "_/> ";
+  padding: 0px 5px;
+}
+
+.center {
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+
+.post-content {
+  margin: 0px 50px;
+}
+
+.small {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.medium {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.large {
+  font-size: 32px;
+  line-height: 46px;
+}
+
+.uber {
+  font-size: 60px;
+  line-height: 68px;
+}
+
+footer {
+  margin: 20vh 0 0 0;
+}
+
+article a:first-of-type, .project {
+  text-decoration: none !important;
+}
+
+.page {
+  margin: 0 80px;
+}
+
+/* Navigation bar */
+
+nav {
+  padding-bottom: 50px;
+}
+
+nav ul,
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .title {
+  display: inline-flex;
+  float: left;
+}
+
+footer li {
+  display: inline-flex;
+}
+
+footer li a {
+  margin: auto;
+  padding: 0 10px;
+}
+
+nav li {
+  display: inline-flex;
+  float: right;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active),
+footer li a {
+  color: #444d56;
+}
+
+nav li a.active {
+  color: #7cfc00;
+}
+
+/* Colors */
+
+{% for color in site.data.css_colors %}
+.{{ color.label }}, .{{ color.label }} * {
+  color: {{ color.code }};
+}
+{% endfor %}
+
+/* FAQ? */
