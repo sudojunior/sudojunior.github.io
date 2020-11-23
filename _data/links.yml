@@ -31,10 +31,10 @@ navbar:
   #   target: /about/
 
   - label: ./projects.exe
-    target: /projects/
+    target: /projects
   
   - label: /posts.jekyll
-    target: /posts/
+    target: /posts
 
 projects:
   - label: gh repo show ~/journey
