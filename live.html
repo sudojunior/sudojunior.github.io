@@ -1,0 +1,19 @@
+---
+layout: page
+title: ./live.tv
+---
+
+<div id="twitch-live" class="center"></div>
+<style>
+  #twitch-live {
+    margin: 50px auto;
+  }
+</style>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+<script>
+  new Twitch.Embed("twitch-live", {
+    width: "90%",
+    height: "70%",
+    channel: "sudojunior"
+  });
+</script>

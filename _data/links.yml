@@ -33,8 +33,11 @@ navbar:
   - label: ./projects.exe
     target: /projects
   
-  - label: /posts.jekyll
+  - label: ./posts.jekyll
     target: /posts
+
+  - label: ./live.tv
+    target: /live
 
 projects:
   - label: gh repo show ~/journey
