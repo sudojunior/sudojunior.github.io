@@ -54,6 +54,6 @@ document.onreadystatechange = async (e) => {
     type(el,
       el.getAttribute("data-cmd") || el.innerHTML,
       parseFloat(el.getAttribute("data-interval")) || 100,
-      parseFloat((el.getAttribute("data-delay")) || 0) + i * 500);
+      parseFloat((el.getAttribute("data-delay")) || 0) /* + i * 500 */);
   }
 };
