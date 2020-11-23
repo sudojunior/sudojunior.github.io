@@ -6,7 +6,6 @@ layout: default
 <style type="text/css" media="screen">
   .container {
     margin: 20px auto;
-    max-width: 600px;
     text-align: center;
   }
   h1 {
@@ -17,9 +16,11 @@ layout: default
   }
 </style>
 
-<div class="container">
-  <h1>404</h1>
+<div class="container no-decor">
+  <h1 class="red">./404</h1>
 
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
+
+  <a class="pink" onclick="history.back()">Go back</a> or <a class="yellow" href="/">go home</a>. Your choice.
 </div>
