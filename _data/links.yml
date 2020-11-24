@@ -22,6 +22,18 @@ socials:
   - # handle: Junior
     link: https://www.youtube.com/channel/UCY8n396MVrnvZILI0EWjCWA
     icon: mdi:youtube-gaming
+    
+  - handle: sudojunior
+    link: https://sudojunior.itch.io
+    icon: cib:itch-io
+    
+  - handle: junior
+    link: https://dev.to/junior
+    icon: mdi:dev-to
+    
+  - handle: /u/sudojunior
+    link: https://reddit.com/u/sudojunior
+    icon: mdi:reddit
 
 navbar:
   - label: ./home.sh
