@@ -64,5 +64,8 @@ projects:
   - label: gh repo show ~/TagSpace
     target: https://github.com/sudojunior/TagSpace
 
+  - label: ggj building-bridges --year 2020
+    target: https://globalgamejam.org/2020/games/building-bridges-8
+
   - label: ssh login frllc_website:22
     target: https://frllc.xyz/
