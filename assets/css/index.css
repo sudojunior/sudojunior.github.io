@@ -2,10 +2,37 @@
 
 ---
 
-* {
-  color: #7cfc00;
+html {
   background-color: #24292e;
   font-family: Roboto Mono, monospace;
+}
+
+p, article, nav, footer svg {
+  color: chartreuse;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: orange;
+}
+
+li {
+  color: grey;
+}
+
+a {
+  color: red;
+}
+
+a:hover, svg:hover {
+  color: steelblue;
+}
+
+[class^="language"] {
+  background: linear-gradient(to left, {% for color in site.data.css_colors %}{{ color.code }} {{ 100 | divided_by: forloop.rindex }}%{% unless forloop.last %}, {% endunless -%}
+    {% endfor %});
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .prompt {
@@ -106,17 +133,17 @@ nav li a {
 
 nav li a:hover:not(.active),
 footer li a {
-  color: #444d56;
+  color: steelblue;
 }
 
 nav li a.active {
-  color: #7cfc00;
+  color: chartreuse;
 }
 
 /* Colors */
 
 {% for color in site.data.css_colors %}
-.{{ color.label }}, .{{ color.label }} * {
+.{{ color.label }} {
   color: {{ color.code }};
 }
 {% endfor %}

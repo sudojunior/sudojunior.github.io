@@ -4,6 +4,9 @@ title: "Powershell Customization (and some extras)"
 date: 2020-07-27 20:55:00 +0100
 categories: aesthetics
 ---
+
+This post includes some useful details on enhancing your powershell environment as well as making it intuative when inside git based projects.
+
 1. Navigate to `%USERPROFILE%\Documents\WindowsPowershell` *this can be run in Win+R* or use `ii $env:USERPROFILE\Documents\WindowsPowershell` in your powershell console.  
   *If the folder doesn't exist, navigate to the Documents folder on the user scope; create and open it.*
 2. Create a file in the directory named `Microsoft.Powershell_profile.ps1`; open the context menu and edit.
