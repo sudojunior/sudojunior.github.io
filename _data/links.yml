@@ -52,8 +52,8 @@ navbar:
     target: /live
 
 projects:
-    target: https://github.com/sudojunior/journey
-  - label: >
+  - target: https://github.com/sudojunior/journey
+    label: >
       We're going on a trip in our favourite rocket ship... 🚀<br/>
       Zooming through the sky, Little Einsteins 👨‍🚀
     
