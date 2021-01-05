@@ -52,9 +52,11 @@ navbar:
     target: /live
 
 projects:
-  - label: gh repo show ~/journey
     target: https://github.com/sudojunior/journey
-  
+  - label: >
+      We're going on a trip in our favourite rocket ship... 🚀<br/>
+      Zooming through the sky, Little Einsteins 👨‍🚀
+    
   - label: gh repo show ~/tycoon-research
     target: https://github.com/sudojunior/tycoon-research
   
