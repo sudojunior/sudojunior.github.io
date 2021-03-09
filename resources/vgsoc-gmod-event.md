@@ -6,7 +6,7 @@ layout: page
 You are playing on <b id="map">a map. ㄟ( ▔, ▔ )ㄏ</b>.
 <script>
   let map = new URL(location.href).searchParams.get("map");
-  if (![null, undefined, ""].include(map))
+  if (![null, undefined, ""].includes(map))
     document.getElementById("map").innerText = map;
 </script>
 
@@ -14,14 +14,11 @@ This page lists the [addon manifest](https://steamcommunity.com/sharedfiles/file
 
 ## Staff
 
-<span class="blue">
+- Junior - System Admin  
+  Go to them if you have problems with the server.
+- Andy Dandy - Admin  
+  Go to them for anything else. 😎
 
-| Player name | Group | Note |
-| --- | --- | --- |
-| Junior | System Admin | Go to them if you have problems with the server itself. |
-| Andy Dandy | Admin | Go to them for anything else. 😎 |
-
-</span>
 ---
 
 <!-- If you cannot play well with others, you may be removed from the game for a few rounds. -->
