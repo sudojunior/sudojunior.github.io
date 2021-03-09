@@ -5,9 +5,9 @@ layout: page
 
 You are playing on <b id="map">a map. ㄟ( ▔, ▔ )ㄏ</b>.
 <script>
-  let query = new URL(location.href).searchParams;
-  if (query.has("map") {% raw %}&&{% endraw %} query.get("map") !== "")
-    document.getElementById("map").innerText = query.get("map");
+  let map = new URL(location.href).searchParams.get("map");
+  if (![null, undefined, ""].include(map))
+    document.getElementById("map").innerText = map;
 </script>
 
 This page lists the [addon manifest](https://steamcommunity.com/sharedfiles/filedetails/?id=2419161901) for the server, and any instructions to use the addons themselves if necessary.
@@ -15,10 +15,12 @@ This page lists the [addon manifest](https://steamcommunity.com/sharedfiles/file
 ## Staff
 
 <span class="blue">
+
 | Player name | Group | Note |
 | --- | --- | --- |
 | Junior | System Admin | Go to them if you have problems with the server itself. |
 | Andy Dandy | Admin | Go to them for anything else. 😎 |
+
 </span>
 ---
 
