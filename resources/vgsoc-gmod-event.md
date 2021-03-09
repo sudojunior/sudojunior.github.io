@@ -3,12 +3,7 @@ title: VGSoc Garry's Mod Event Server
 layout: page
 ---
 
-You are playing on <b id="map">a map. ㄟ( ▔, ▔ )ㄏ</b>.
-<script>
-  let map = new URL(location.href).searchParams.get("map");
-  if (![null, undefined, ""].includes(map))
-    document.getElementById("map").innerText = map;
-</script>
+You are playing on <b>a map. ㄟ( ▔, ▔ )ㄏ</b>.
 
 This page lists the [addon manifest](https://steamcommunity.com/sharedfiles/filedetails/?id=2419161901) for the server, and any instructions to use the addons themselves if necessary.
 
@@ -75,8 +70,8 @@ _You can find the full addon manifest [here](https://docs.google.com/spreadsheet
     Please be aware that if a dead player leaves before the round has ended, their body will not be 'inspectable'.
     An index value target of nil will be logged in the console.
     Please ignore this warning and continue playing as intended, a detective may ask an admin for the information of the player.
-    > If the player can be identified by an admin, the detective who asked will recieve a PM regarding the details of said player.
     </span>
+    > If the player can be identified by an admin, the detective who asked will recieve a PM regarding the details of said player.
 - Destructable Doors
 - Enhanced Playermodel Selector
   - Open console and run `playermodel_selector`
