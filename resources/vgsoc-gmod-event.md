@@ -5,19 +5,21 @@ layout: page
 
 You are playing on <b id="map">a map. ㄟ( ▔, ▔ )ㄏ</b>.
 <script>
-  if (location.hash)
-    document.getElementById("map").innerText = location.hash;
+  let query = new URL(location.href).searchParams;
+  if (query.has("map") && query.get("map") !== "")
+    document.getElementById("map").innerText = query.get("map");
 </script>
 
 This page lists the [addon manifest](https://steamcommunity.com/sharedfiles/filedetails/?id=2419161901) for the server, and any instructions to use the addons themselves if necessary.
 
 ## Staff
 
+<span class="blue">
 | Player name | Group | Note |
 | --- | --- | --- |
 | Junior | System Admin | Go to them if you have problems with the server itself. |
 | Andy Dandy | Admin | Go to them for anything else. 😎 |
-
+</span>
 ---
 
 <!-- If you cannot play well with others, you may be removed from the game for a few rounds. -->
