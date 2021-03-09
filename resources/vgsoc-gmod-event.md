@@ -6,7 +6,7 @@ layout: page
 You are playing on <b id="map">a map. ㄟ( ▔, ▔ )ㄏ</b>.
 <script>
   let query = new URL(location.href).searchParams;
-  if (query.has("map") {% safe %}&&{% endsafe %} query.get("map") !== "")
+  if (query.has("map") {% raw %}&&{% endraw %} query.get("map") !== "")
     document.getElementById("map").innerText = query.get("map");
 </script>
 
