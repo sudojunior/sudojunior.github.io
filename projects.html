@@ -12,25 +12,24 @@ title: ./projects.exe
   | where: "layout", "projects"
 %}
 
-{% for project in site.data.links.projects %}
-<article>
-  {% if project.image %}
-
-  {% endif %}
-  <a href="{{ project.target }}">
-    <div class="project">
-      {% if project.image %}
-      <div class="project-image">
-        <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
+<div class="grid">
+  {% for project in projects %}
+  <article>
+    <a href="{{ project.target }}">
+      <div class="project">
+        {% if project.image %}
+        <div class="project-image">
+          <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
+        </div>
+        {% endif %}
+        <div class="project-title">
+          <a href="{{ project.url }}">{{ project.title }}</a>
+        </div>
+        <div class="project-description">
+          {{ project.description }}
+        </div>
       </div>
-      {% endif %}
-      <div class="project-title">
-        <a href="{{ project.url }}">{{ project.title }}</a>
-      </div>
-      <div class="project-description">
-        {{ project.description }}
-      </div>
-    </div>
-  </a>
-</article>
-{% endfor %}
+    </a>
+  </article>
+  {% endfor %}
+</div>
