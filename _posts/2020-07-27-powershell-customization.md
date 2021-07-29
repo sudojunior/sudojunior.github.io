@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "Powershell Customization (and some extras)"
+title: Powershell Customization (Profiles and oh-my-posh)
 date: 2020-07-27 20:55:00 +0100
-categories: aesthetics
+categories: 
+- aesthetics
+- powershell
 ---
 
 This post includes some useful details on enhancing your powershell environment as well as making it intuative when inside git based projects.
@@ -23,7 +25,9 @@ function Here {
 
 There are some other customizations available to powershell that were inspired by shell scripts.
 
-One of them being 'posh-git' based on 'oh-my-posh'. The theme used below is `Agnoster`. *Please don't use `Material`, you'll need to reboot your terminal session to fix the symbols.*
+One of them being 'posh-git' for 'oh-my-posh'. The theme used below is `Agnoster`.
+
+I would show all of them
 
 I would recommend reading this gist about how to configure PowerShell for this modification: https://gist.github.com/jchandra74/5b0c94385175c7a8d1cb39bc5157365e
 

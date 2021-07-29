@@ -8,10 +8,29 @@ title: ./projects.exe
   <blockquote class="red">Hahaha... no. I haven't the faintest idea.</blockquote>
 </div>
 
+{% assign projects = site.pages
+  | where: "layout", "projects"
+%}
+
 {% for project in site.data.links.projects %}
 <article>
+  {% if project.image %}
+
+  {% endif %}
   <a href="{{ project.target }}">
-    <h3 class="prompt cmd project {% cycle 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink' %}">{{ project.label }}</h3>
+    <div class="project">
+      {% if project.image %}
+      <div class="project-image">
+        <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
+      </div>
+      {% endif %}
+      <div class="project-title">
+        <a href="{{ project.url }}">{{ project.title }}</a>
+      </div>
+      <div class="project-description">
+        {{ project.description }}
+      </div>
+    </div>
   </a>
 </article>
 {% endfor %}

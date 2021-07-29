@@ -1,0 +1,18 @@
+---
+layout: page
+---
+<div class="center">
+  <h1 class="prompt"><span class="cmd">{{ page.title }}</span></h1>
+
+  <p>{{ page.description }}</p>
+</div>
+
+{{ content }}
+
+<div class="flex justify-around">
+  {% for link in page.links %}
+    {% assign domain = link.href | split: "/" %}
+    {{ domain }}
+    <a href="{{ link.href }}">{{ link.label }}</a>
+  {% endfor %}
+</div>

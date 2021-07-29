@@ -28,9 +28,8 @@ a:hover, svg:hover {
 }
 
 [class^="language"] {
-  background: linear-gradient(to left, {% for color in site.data.css_colors %}{{ color.code }} {{ 100 | divided_by: forloop.rindex }}%{% unless forloop.last %}, {% endunless -%}
-    {% endfor %});
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Lucida Console", Monaco, monospace;
 }
@@ -147,5 +146,21 @@ nav li a.active {
   color: {{ color.code }};
 }
 {% endfor %}
+
+/* Grid, Flex & Justify */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, auto);
+}
+
+.justify-around {
+  justify-content: space-around;
+}
 
 /* FAQ? */
