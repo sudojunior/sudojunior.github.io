@@ -1,35 +1,34 @@
 ---
 layout: page
 title: ./projects.exe
+description: |
+  Do I know what I'm doing?
+  <p class="red">Hahaha... no. I haven't the faintest idea.</p>
 ---
 
-<div>
-  <p>Do I know what I'm doing?</p>
-  <blockquote class="red">Hahaha... no. I haven't the faintest idea.</blockquote>
-</div>
-
 {% assign projects = site.pages
-  | where: "layout", "projects"
-%}
+  | where: "layout", "project"
+  | sort_natural %}
 
-<div class="grid">
+<div class="grid justify-around center">
   {% for project in projects %}
   <article>
-    <a href="{{ project.target }}">
-      <div class="project">
-        {% if project.image %}
-        <div class="project-image">
-          <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
-        </div>
-        {% endif %}
-        <div class="project-title">
-          <a href="{{ project.url }}">{{ project.title }}</a>
-        </div>
-        <div class="project-description">
-          {{ project.description }}
-        </div>
+    <div class="project">
+      {% if project.image %}
+      <div class="project-image">
+        <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
       </div>
-    </a>
+      {% endif %}
+      <div class="project-title">
+        <a href="{{ project.url }}">{{ project.title }}</a>
+      </div>
+      <div class="project-description">
+        {{ project.description }}
+      </div>
+      {% if project.created %}
+      <div class="grey">{{ project.created | date_to_string }}</div>
+      {% endif %}
+    </div>
   </article>
   {% endfor %}
 </div>

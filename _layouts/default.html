@@ -16,7 +16,7 @@
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description"
-    content="{{ page.excerpt | default: site.description }}">
+    content="{{ page.excerpt | default: site.description | strip_html }}">
   <meta property="og:image"
     content="https://github.com/{{ site.title | downcase }}.png">
 
@@ -25,7 +25,7 @@
   <meta property="twitter:url" content="{{ site.url }}">
   <meta property="twitter:title" content="{{ title }}">
   <meta property="twitter:description"
-    content="{{ page.excerpt | default: site.description }}">
+    content="{{ page.excerpt | default: site.description | strip_html }}">
   <meta property="twitter:image"
     content="https://github.com/{{ site.title | downcase }}.png">
 
@@ -37,6 +37,11 @@
 
   <script src="{{ '/assets/js/index.js' | absolute_url }}"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/github-dark.min.css">
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/languages/powershell.min.js"></script>
+  <script>hljs.highlightAll();</script>
 </head>
 
 <body>

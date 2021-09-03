@@ -1,18 +1,16 @@
 ---
 layout: page
 ---
+{% if page.image %}
 <div class="center">
-  <h1 class="prompt"><span class="cmd">{{ page.title }}</span></h1>
-
-  <p>{{ page.description }}</p>
+  <img class="center img-header" src="{{ page.image }}">
 </div>
+{% endif %}
 
 {{ content }}
 
 <div class="flex justify-around">
   {% for link in page.links %}
-    {% assign domain = link.href | split: "/" %}
-    {{ domain }}
-    <a href="{{ link.href }}">{{ link.label }}</a>
+  <a href="{{ link.href }}">{{ link.label }}</a>
   {% endfor %}
 </div>

@@ -5,7 +5,7 @@ date: 2020-08-19 18:15:00 +0100
 categories: fivem
 ---
 
-> Specifically for windows (and linux subsystem if you want to use it), other operating systems may behave differently.
+Specifically for windows (and linux subsystem if you want to use it), other operating systems may behave differently.
 
 *This guide was written for those that may have been unable to use [gta5view](https://lmgtfy.com/?q=gta5view).*
 

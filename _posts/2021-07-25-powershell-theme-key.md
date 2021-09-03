@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Powershell Customization
+title: Powershell Theme Key
 date: 2021-07-25 17:35:00 +0100
 categories:
 - powershell
 ---
 
-This is a direct follow up of [the post]({{ site.baseurl }}/2020/07/25/powershell-customization) I wrote on `oh-my-posh` and how I use it, but I will keep this short and only explain the necessary details.
+This is a direct follow up of [the post]({{ site.baseurl }}/2020/07/27/powershell-customization) I wrote on `oh-my-posh` and how I use it, but I will keep this short and only explain the necessary details.
 
 ```ps1
 $themePath = "~/Documents/WindowsPowershell/theme"
@@ -49,8 +49,8 @@ The `$themePath` variable is set to the userprofile home (`~`) by default, but c
 
 ## Word of warning with OneDrive
 
-*Specifically the Enterprise edition, Personal OneDrive (or SkyDrive as I've seen it named) did not have this problem.*
+<img style="float: right;" src="https://i.imgur.com/gK7wYTg.png"/>
 
-If given the chance, OneDrive can and will backup any files it can from Desktop, Documents and Pictures (as well as any other folders you specify). Because this includes the theme file, it can be a problem for the user. It is likely best that you try to redirect the path target to the OneDrive folder - wherever that may be, otherwise the *somewhat* effective move would be to remove the app completely. However, I could not remove it's folder due to it being restricted... by my own account.
+*Specifically the Enterprise edition, Personal OneDrive (or SkyDrive as I've seen it named) did not have this problem as folder sync was disabled beforehand - but is likely to experience a similar conflict.*
 
-![OneDrive Restriction](https://i.imgur.com/gK7wYTg.png)
+If given the chance, OneDrive can and will backup any files it can from Desktop, Documents and Pictures (as well as any other folders you specify). Because this includes the theme file, it can be a problem for the user. It is likely best that you try to redirect the path target to the OneDrive folder - wherever that may be, otherwise the *somewhat* effective move would be to remove the app completely. However, I could not remove it's folder due to it being restricted... **by my own account**.
