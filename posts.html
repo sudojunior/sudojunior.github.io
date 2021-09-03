@@ -2,13 +2,15 @@
 layout: page
 title: ./posts.jekyll
 ---
-
-{% for post in site.posts %}
-<article>
-  <a href="{{ post.url }}">
-    <h3 class="{% cycle "red", "orange", "yellow", "green", "blue", "purple", "pink" %} prompt cmd" data-interval="{{ post.title.size | times: 0.8 }}" data-delay="{{ forloop.index }}"> {{ post.title }}</h3>
-  </a>
-  <p>{{ post.excerpt }}</p>
-  <a href="{{ post.url }}">Read more...</a>
-</article>
-{% endfor %}
+<div class="grid justify-around">
+  {% for post in site.posts %}
+  <article>
+    <a href="{{ post.url }}">
+      <h3 class="{% cycle 'red', 'orange' , 'yellow' , 'green' , 'blue' , 'purple' , 'pink' %}"
+        data-interval="{{ post.title.size | times: 0.8 }}" data-delay="{{ forloop.index }}"> {{ post.title }}</h3>
+    </a>
+    <p>{{ post.excerpt }}</p>
+    <a href="{{ post.url }}">Read more...</a>
+  </article>
+  {% endfor %}
+</div>

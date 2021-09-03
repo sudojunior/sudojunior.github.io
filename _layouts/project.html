@@ -1,0 +1,16 @@
+---
+layout: page
+---
+{% if page.image %}
+<div class="center">
+  <img class="center img-header" src="{{ page.image }}">
+</div>
+{% endif %}
+
+{{ content }}
+
+<div class="flex justify-around">
+  {% for link in page.links %}
+  <a href="{{ link.href }}">{{ link.label }}</a>
+  {% endfor %}
+</div>

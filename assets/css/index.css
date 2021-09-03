@@ -7,16 +7,12 @@ html {
   font-family: Roboto Mono, monospace;
 }
 
-p, article, nav, footer svg {
+p, article, nav, footer svg, li {
   color: chartreuse;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: orange;
-}
-
-li {
-  color: grey;
 }
 
 a {
@@ -28,10 +24,6 @@ a:hover, svg:hover {
 }
 
 [class^="language"] {
-  background: linear-gradient(to left, {% for color in site.data.css_colors %}{{ color.code }} {{ 100 | divided_by: forloop.rindex }}%{% unless forloop.last %}, {% endunless -%}
-    {% endfor %});
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-family: "Lucida Console", Monaco, monospace;
 }
 
@@ -76,7 +68,7 @@ a:hover, svg:hover {
 }
 
 footer {
-  margin: 20vh 0 0 0;
+  margin: 200px 0 0 0;
 }
 
 article a:first-of-type, .project {
@@ -148,4 +140,36 @@ nav li a.active {
 }
 {% endfor %}
 
+/* Grid, Flex & Justify */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: repeat(3, auto);
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
 /* FAQ? */
+
+/* Misc */
+img.img-header {
+  display: block;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 80%;
+  height: 200px; 
+  object-fit: cover;
+  object-position: top;
+}

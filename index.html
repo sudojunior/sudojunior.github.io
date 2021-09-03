@@ -2,8 +2,31 @@
 layout: default
 ---
 
+{% assign projects = site.pages
+  | where: "layout", "projects"
+  | filter_exp: "project", "project.show_on_homepage == true"
+%}
+
 <div class="center">
   <h1 class="prompt"><span class="cmd">{{ site.title | downcase }}</span></h1>
 
   <p>{{ site.description }}</p>
+
+  <div class="grid">
+    {% for project in projects limit:3 %}
+      <div class="project">
+        {% if project.image %}
+        <div class="project-image">
+          <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
+        </div>
+        {% endif %}
+        <div class="project-title">
+          <a href="{{ project.url }}">{{ project.title }}</a>
+        </div>
+        <div class="project-description">
+          {{ project.description }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
