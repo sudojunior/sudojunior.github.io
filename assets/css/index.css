@@ -123,8 +123,8 @@ nav li a {
   text-decoration: none;
 }
 
-nav li a:hover:not(.active),
-footer li a {
+a:hover:not(.active),
+a:hover svg {
   color: #D97117;
 }
 
