@@ -2,7 +2,7 @@
 title: Story Engine
 layout: project
 description: A discord interactions service that provides a platform for interactive stories written by the community.
-image: /assets/images/story-engine-demo.png
+image: /assets/images/story-engine-demo.gif
 show_on_homepage: true
 created: 2021-11-20
 links:
