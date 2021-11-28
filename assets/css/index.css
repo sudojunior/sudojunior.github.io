@@ -129,7 +129,7 @@ nav li a {
 
 nav li a:hover:not(.active),
 footer li a {
-  color: steelblue;
+  color: #D97117;
 }
 
 nav li a.active {
