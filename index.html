@@ -12,12 +12,13 @@ layout: default
 
   <p>{{ site.description }}</p>
 
-  <div class="grid">
+  <div class="grid justify-around center">
     {% for project in projects limit:3 %}
+    <article>
       <div class="project">
         {% if project.image %}
         <div class="project-image">
-          <a href="{{ project.url }}"><img src="{{ project.image }}" alt="{{ project.title }}" /></a>
+          <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
         </div>
         {% endif %}
         <div class="project-title">
@@ -26,7 +27,11 @@ layout: default
         <div class="project-description">
           {{ project.description }}
         </div>
+        {% if project.created %}
+        <div class="grey">{{ project.created | date_to_string }}</div>
+        {% endif %}
       </div>
+    </article>
     {% endfor %}
   </div>
 </div>
