@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign projects = site.pages
-  | where: "layout", "projects"
+  | where: "layout", "project"
   | where_exp: "project", "project.show_on_homepage == true"
 %}
 
