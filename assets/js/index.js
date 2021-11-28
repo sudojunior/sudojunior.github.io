@@ -45,8 +45,7 @@ function runCommand(event, $el) {
   $el.text("");
 }
 
-document.onreadystatechange = async (e) => {
-  e.preventDefault();
+window.onload = (e) => {
   let cmdElements = document.getElementsByClassName("cmd");
 
   for (let i = 0; i < cmdElements.length; i++) {

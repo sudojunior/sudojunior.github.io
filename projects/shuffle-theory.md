@@ -4,7 +4,7 @@ title: Shuffle Theory
 date: 2021-10-24
 description: Research into different shuffling theories and how they may effect a service as it scales across shards and clusters.
 image: /assets/images/shuffle-theory-table.png
-show_on_homepage: true
+show_on_homepage: false
 tags: [random, github-actions]
 links:
   - label: Repository
@@ -12,6 +12,8 @@ links:
   - label: Actions
     href: https://github.com/TinkerStorm/shuffle-theory/actions
 ---
+
+> [Story Engine](story-engine) uses what I learned here to power it's branch narrative core.
 
 The chance of a role being assigned to a player is determined by chance.shuffle. When a role's chance is calculated, it can be anywhere between `70%` and `130%` - for now they are scaled up as integers, but I am unsure on the effect it may have on the chance outcomes.
 
@@ -41,3 +43,5 @@ for (const i in chances)
   chances[i] /= scaleFactor;
 // ensuring all chance values are scaled to equal that of 1
 ```
+
+> This eventually turned into [scale-to (NPM)](https://npm.im/scale-to) ([GitHub](https://github.com/TinkerStorm/scale-to)).

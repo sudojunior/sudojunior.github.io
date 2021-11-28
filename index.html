@@ -4,7 +4,7 @@ layout: default
 
 {% assign projects = site.pages
   | where: "layout", "projects"
-  | filter_exp: "project", "project.show_on_homepage == true"
+  | where_exp: "project", "project.show_on_homepage == true"
 %}
 
 <div class="center">
