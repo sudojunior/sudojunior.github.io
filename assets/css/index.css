@@ -68,10 +68,14 @@ a:hover, svg:hover {
 }
 
 footer {
-  margin: 200px 0 0 0;
+  margin: 50px 0 0;
 }
 
-article a:first-of-type, .project {
+.project {
+  padding: 10px 0;
+}
+
+article a:first-of-type {
   text-decoration: none !important;
 }
 
