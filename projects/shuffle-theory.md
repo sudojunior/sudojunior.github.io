@@ -4,7 +4,6 @@ title: Shuffle Theory
 created: 2021-10-24
 description: Research into different shuffling theories and how they may effect a service as it scales across shards and clusters.
 image: /assets/images/shuffle-theory-table.png
-show_on_homepage: false
 tags: [random, mafia-game, github, research]
 links:
   - label: Repository

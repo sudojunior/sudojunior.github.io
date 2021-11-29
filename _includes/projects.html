@@ -7,10 +7,11 @@
 <div class="grid justify-around center">
   {% assign projects = site.pages
     | where: "layout", "project" | sort_natural: "title"
-    | where_exp: "page", "page.tags contains include.tag and page.archived != true"
+    | where: "tags", include.tag
+    | where_exp: "page", "page.archived != true"
   %}
 
-  {% for project in projects limit:include.limit %}
+  {% for project in projects limit:3 %}
   <article>
     <div class="project">
       {% if project.image %}
