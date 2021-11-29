@@ -6,63 +6,11 @@ layout: default
 
   <p>{{ site.description | markdownify }}</p>
 
-  <div class="center" style="margin-top: 2rem;">
-    <h2>Game Projects</h2>
-    <p class="grey">At this time, all projects here were made in a group.</p>
-  </div>
+  <h2 class="center">Game Projects</h2>
 
-  <div class="grid justify-around center">
-    {% assign projects = site.pages | where: "layout", "project" %}
-    {% assign projects = site.pages | where: "categories", "game-dev" %}
-  
-    {% for project in projects limit:3 %}
-    <article>
-      <div class="project">
-        {% if project.image %}
-        <div class="project-image">
-          <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
-        </div>
-        {% endif %}
-        <div class="project-title">
-          <a href="{{ project.url }}">{{ project.title }}</a>
-        </div>
-        <div class="project-description">
-          {{ project.description }}
-        </div>
-        {% if project.created %}
-        <div class="grey">{{ project.created | date_to_string }}</div>
-        {% endif %}
-      </div>
-    </article>
-    {% endfor %}
-  </div>
+  {% include projects.html tag="game-dev" limit=3 %}
 
   <h2 class="center">Discord Projects</h2>
 
-  <div class="grid justify-around center">
-    {% assign projects = site.pages
-      | where: "layout", "project" | where: "categories", "discord" | where_exp: "page", "page.archived != true"
-    %}
-  
-    {% for project in projects limit:3 %}
-    <article>
-      <div class="project">
-        {% if project.image %}
-        <div class="project-image">
-          <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
-        </div>
-        {% endif %}
-        <div class="project-title">
-          <a href="{{ project.url }}">{{ project.title }}</a>
-        </div>
-        <div class="project-description">
-          {{ project.description }}
-        </div>
-        {% if project.created %}
-        <div class="grey">{{ project.created | date_to_string }}</div>
-        {% endif %}
-      </div>
-    </article>
-    {% endfor %}
-  </div>
+  {% include projects.html tag="discord" limit=3 %}
 </div>
