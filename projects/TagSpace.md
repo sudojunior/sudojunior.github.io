@@ -4,6 +4,7 @@ title: TagSpace
 archived: true
 description: A bot to handle tags in user curated namespaces.
 image: /assets/images/tagspace-usage.png
+tags: [discord]
 links:
   - label: Repository
     href: https://github.com/sudojunior/TagSpace

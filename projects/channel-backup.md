@@ -1,11 +1,11 @@
 ---
 layout: project
 title: Channel Backup
-date: 2020-07-15
 description: A utility to assist server adminstrators with the consistency of their information channels.
 image: /assets/images/channel-backup-capture.png
 show_on_homepage: true
-tags: [discord, github]
+created: 2020-07-15
+tags: [discord, github, slash-commands]
 links:
   - label: NPM Package
     href: https://npm.im/channel-backup
