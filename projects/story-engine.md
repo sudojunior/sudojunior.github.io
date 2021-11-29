@@ -4,6 +4,7 @@ layout: project
 description: A discord interactions service that provides a platform for interactive stories written by the community.
 image: /assets/images/story-engine-demo.gif
 show_on_homepage: true
+tags: [discord, github, slash-commands, narrative]
 created: 2021-11-20
 links:
   - href: https://tinkerstorm.github.io/story-engine

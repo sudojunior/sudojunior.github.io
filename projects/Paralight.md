@@ -3,7 +3,7 @@ layout: project
 title: Paralight (Group Project)
 description: Co-op puzzle adventure game.
 image: /assets/images/paralight-overlook.png
-tag: game
+tags: [game-dev, unity]
 links:
   - label: itch.io Page
     href: https://mistiare.itch.io/paralight
