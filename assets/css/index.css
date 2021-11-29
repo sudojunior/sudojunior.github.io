@@ -39,6 +39,10 @@ a {
   text-align: center;
 }
 
+.center .twitter-tweet {
+  margin: auto;
+}
+
 .post-content {
   margin: 0px 50px;
 }
@@ -147,6 +151,8 @@ nav li a.active {
 }
 
 .grid {
+  max-width: 1280px;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: repeat(3, auto);

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Shuffle Theory
-date: 2021-10-24
+created: 2021-10-24
 description: Research into different shuffling theories and how they may effect a service as it scales across shards and clusters.
 image: /assets/images/shuffle-theory-table.png
 show_on_homepage: false

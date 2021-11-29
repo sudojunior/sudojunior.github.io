@@ -5,13 +5,9 @@
 {% endcomment %}
 
 <div class="grid justify-around center">
-  {% assign projects = site.pages
-  | where: "layout", "project"
-  | where_exp: "project", "project.tags includes include.tag and project.archived != true"
-  | sort_natural
-  %}
+  {% assign projects = site.pages | where_exp: "page", "page.layout == 'project' and page.tags contains include.tag and page.archived != true" | sort_natural %}
 
-  {% for project in include.projects limit:include.limit %}
+  {% for project in projects limit:include.limit %}
   <article>
     <div class="project">
       {% if project.image %}
