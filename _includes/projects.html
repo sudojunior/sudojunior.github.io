@@ -1,0 +1,34 @@
+{% comment %}
+[Inputs]
+- tag: string
+- limit: int
+{% endcomment %}
+
+<div class="grid justify-around center">
+  {% assign projects = site.pages
+  | where: "layout", "project"
+  | where_exp: "project", "project.tags includes include.tag and project.archived != true"
+  | sort_natural
+  %}
+
+  {% for project in include.projects limit:include.limit %}
+  <article>
+    <div class="project">
+      {% if project.image %}
+      <div class="project-image">
+        <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
+      </div>
+      {% endif %}
+      <div class="project-title">
+        <a href="{{ project.url }}">{{ project.title }}</a>
+      </div>
+      <div class="project-description">
+        {{ project.description }}
+      </div>
+      {% if project.created %}
+      <div class="grey">{{ project.created | date_to_string }}</div>
+      {% endif %}
+    </div>
+  </article>
+  {% endfor %}
+</div>

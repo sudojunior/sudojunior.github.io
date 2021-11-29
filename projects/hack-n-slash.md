@@ -5,7 +5,7 @@ date: 2021-09-28
 description: A slash commands bot using guild commands as a custom commands alternative.
 image: /assets/images/hack-n-slash-capture.png
 show_on_homepage: true
-tags: [discord, slash-commands]
+tags: [discord, github, slash-commands]
 links:
   - label: Repository
     href: https://github.com/sudojunior/hack-n-slash
