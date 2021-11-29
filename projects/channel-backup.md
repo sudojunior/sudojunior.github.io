@@ -1,7 +1,6 @@
 ---
 layout: project
 title: Channel Backup
-date: 2020-07-15
 description: A utility to assist server adminstrators with the consistency of their information channels.
 image: /assets/images/channel-backup-capture.png
 show_on_homepage: true
