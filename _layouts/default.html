@@ -3,7 +3,7 @@
   {% capture title -%}
     @{{ site.title | downcase }} $ {% if page.title %}{{ page.title | strip_html }}{% endif %}
   {%- endcapture %}
-  {% assign description = page.except | default: site.description | markdownify | strip_html %}
+  {% assign description = page.excerpt | default: page.description | default: site.description | markdownify | strip_html %}
   {% assign image = page.image | default: site.github.owner_gravatar_url | absolute_url %}
 
   <!-- Primary Meta Tags -->
