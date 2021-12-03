@@ -14,19 +14,21 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:url" content="{{ page.url | default: site.url }}">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
   <meta property="og:image" content="{{ image }}">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ site.url }}">
+  <meta property="twitter:url" content="{{ page.url | default: site.url }}">
   <meta property="twitter:title" content="{{ title }}">
   <meta property="twitter:description" content="{{ description }}">
   <meta property="twitter:image" content="{{ image }}">
+  {% assign twitter = site.data.links.socials | find: "icon", "mdi:twitter" %}
+  <meta property="twitter:creator" content="@{{ social.handle }}">
 
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | absolute_url }}" type="image/x-icon">
 
   <!-- Scripts and Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/index.css' | absolute_url }}">
