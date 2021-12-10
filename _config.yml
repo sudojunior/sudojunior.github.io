@@ -5,3 +5,6 @@ description: |
   I run a community named TinkerStorm on [Discord](https://discord.gg/Bb3JQQG) and [GitHub](https://github.com/TinkerStorm) which is dedicated to researching the decisions of communities and their players.
 
 permalink: /:year/:month/:day/:title
+author: sudojunior
+feed:
+  path: atom.xml
