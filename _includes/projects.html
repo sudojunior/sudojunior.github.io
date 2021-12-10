@@ -4,7 +4,7 @@
 - limit: int
 {% endcomment %}
 
-<div class="grid justify-around center">
+<div class="flex justify-around center">
   {% assign projects = site.pages
     | where: "layout", "project" | sort_natural: "title"
     | where: "tags", include.tag
