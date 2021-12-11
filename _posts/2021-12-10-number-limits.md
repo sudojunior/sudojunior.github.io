@@ -36,29 +36,28 @@ This is the iteration outcome for 15 players, detailing the relation between the
 - C# (.NET Core 5.0.11)
   > Type `decimal` can be exchanged for `double` or `float` with their respective unit conversion, the outcome will not change.
 
-| Players | `.js` | `.py` | `.cs` |
-| ------- | ----- | ----- | ----- |
-| 0  | 0 | 0 | 0 |
-| 1  | 0 | -1 | -1 |
-| 2  | 0 | 0 | 0 |
-| 3  | 0 | 0 | 0 |
-| 4  | -1 | -1 | -1  |
-| 5  | 2 | -1 | -1 |
-| 6  | 1 | 1 | 1 |
-| 7  | 1 | 1 | 1 |
-| 8  | 0 | 0 | 0 |
-| 9  | 1 | 0 | 0 |
-| 10 | 0 | 0 | 0 |
-| 11 | 0 | 0 | 0 |
-| 12 | 0 | 0 | 0 |
-| 13 | 0 | -1 | -1 |
-| 14 | -1 | -1 | -1 |
-| 15 | 2 | 1 | 1 |
-| 16 | 1 | 1 | 1 |
-| 17 | 1 | 0 | 0 |
-| 18 | 0 | 0 | 0 |
-| 19 | 1 | 1 | 1 |
-| 20 | 0 | 0 | 0 |
+| Players | `.js` | `.py` | `.cs` | `.rs` |
+| ------- | ----- | ----- | ----- | ----- |
+| 0       | 0     | 0     | 0     | 0     |
+| 1       | 0     | -1    | -1    | 0     |
+| 2       | 0     | 0     | 0     | 0     |
+| 3       | 0     | 0     | 0     | 0     |
+| 4       | -1    | -1    | -1    | -1    |
+| 5       | 2     | -1    | -1    | 2     |
+| 6       | 1     | 1     | 1     | 1     |
+| 7       | 1     | 1     | 1     | 1     |
+| 8       | 0     | 0     | 0     | 0     |
+| 9       | 1     | 0     | 0     | 1     |
+| 10      | 0     | 0     | 0     | 0     |
+| 11      | 0     | 0     | 0     | 0     |
+| 12      | 0     | 0     | 0     | 0     |
+| 13      | 0     | -1    | -1    | 0     |
+| 14      | -1    | -1    | -1    | -1    |
+| 15      | 2     | 1     | 1     | 2     |
+| 16      | 1     | 1     | 1     | 1     |
+| 17      | 1     | 0     | 0     | 1     |
+| 18      | 0     | 0     | 0     | 0     |
+| 19      | 1     | 1     | 1     | -1    |
 
 To be entirely honest, I'm still not quite sure what is happening here... I'll update this post at some point if I figure out a solution that stays true to the original goal - the alternative being that a role configuration is predefined and then sliced based on how many players there are or create a Dictionary / Object / HashMap of arrays mapped to player counts. If you wish to track its progress, you can follow along with what I do at [shuffle-theory](https://github.com/TinkerStorm/shuffle-theory) on [TinkerStorm](https://github.com/TinkerStorm) - you'll find it does a daily run of role shuffling with the methods available (with this finding, it will soon do a matrix run to support testing different player counts).
 
