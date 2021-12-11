@@ -192,3 +192,13 @@ img.img-header {
   object-fit: cover;
   object-position: top;
 }
+
+table th {
+  color: cornflowerblue;
+  padding: 10px;
+}
+
+table td {
+  color: tomato;
+  padding: 1px 10px;
+}
