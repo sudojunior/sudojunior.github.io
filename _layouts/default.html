@@ -29,13 +29,13 @@
   {% assign twitter = site.data.links.socials | find: "icon", "mdi:twitter" %}
   <meta property="twitter:creator" content="@{{ social.handle }}">
 
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | absolute_url }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 
   <!-- Scripts and Styles -->
-  <link rel="stylesheet" href="{{ '/assets/css/index.css' | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/index.css' | relative_url }}">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&amp;display=swap">
 
-  <script src="{{ '/assets/js/index.js' | absolute_url }}"></script>
+  <script src="{{ '/assets/js/index.js' | relative_url }}"></script>
   <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
   <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/github-dark.min.css">
@@ -52,7 +52,7 @@
       {% for el in site.data.links.navbar reversed %}
       <li>
         <a {% if page.url == el.target %}class="active" {% endif %}
-          href="{{ el.target | absolute_url }}">{{ el.label }}</a>
+          href="{{ el.target | relative_url }}">{{ el.label }}</a>
       </li>
       {% endfor %}
     </ul>

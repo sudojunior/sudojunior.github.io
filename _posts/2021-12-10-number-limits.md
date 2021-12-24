@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Number limits in programming
+title: Number limits
 date: 2021-12-10 20:48:00 +0000
 categories:
   - theory
@@ -57,7 +57,7 @@ This is the iteration outcome for 15 players, detailing the relation between the
 | 16      | 1     | 1     | 1     | 1     |
 | 17      | 1     | 0     | 0     | 1     |
 | 18      | 0     | 0     | 0     | 0     |
-| 19      | 1     | 1     | 1     | -1    |
+| 19      | 1     | 1     | 1     | 1    |
 
 To be entirely honest, I'm still not quite sure what is happening here... I'll update this post at some point if I figure out a solution that stays true to the original goal - the alternative being that a role configuration is predefined and then sliced based on how many players there are or create a Dictionary / Object / HashMap of arrays mapped to player counts. If you wish to track its progress, you can follow along with what I do at [shuffle-theory](https://github.com/TinkerStorm/shuffle-theory) on [TinkerStorm](https://github.com/TinkerStorm) - you'll find it does a daily run of role shuffling with the methods available (with this finding, it will soon do a matrix run to support testing different player counts).
 
