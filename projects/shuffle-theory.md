@@ -10,6 +10,10 @@ links:
     href: https://github.com/TinkerStorm/shuffle-theory
   - label: Actions
     href: https://github.com/TinkerStorm/shuffle-theory/actions
+  - label: Number limits (Post)
+    href: https://sudojunior.github.io/2021/12/10/number-limits
+  - label: Number accuracy (Post)
+    href: https://sudojunior.github.io/2021/12/24/number-accuracy
 ---
 
 > [Story Engine](story-engine) uses what I learned here to power it's branch narrative core.
