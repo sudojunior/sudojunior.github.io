@@ -8,10 +8,11 @@ categories:
   - logic
 excerpt_separator: <!--more-->
 ---
+This post is incomplete, a revised post will unify my findings once I have time to do so.
+<!--more-->
+
 
 This post is a direct follow up of '[Number limits](./2021/12/10/number-limits)' covers the accuracy which C-derived compilers have.
-
-<!--more-->
 
 While the intial outlook on this problem was rather hopeless considering it was 'part of the interpreter', some relief can be found when using the standard `Math` rounding methods in their varying capacity. For this set of data, I am using the same set of code snippets with the modified intention to use each method.
 

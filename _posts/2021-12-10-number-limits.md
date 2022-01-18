@@ -8,8 +8,11 @@ categories:
   - logic
 excerpt_separator: <!--more-->
 ---
-This post is directly tied to [`shuffle-theory`]({{ site.baseurl }}/projects/shuffle-theory) and its intentions to use ratio based role allocation in mafia games.
+This post is incomplete, a revised post will unify my findings once I have time to do so.
 <!--more-->
+
+This post is directly tied to [`shuffle-theory`]({{ site.baseurl }}/projects/shuffle-theory) and its intentions to use ratio based role allocation in mafia games.
+
 There are some complications I should have realised when using floating point numbers, and this refers to the [`IEEE 754`](https://en.wikipedia.org/wiki/IEEE_754) spec that all languages based on C use - meaning it can only cover upto 15 decimal places before the maths gets a little strange. While the code itself is theoretically correct, the runtime was not made to handle that kind of calculation - as shown below with this script (based on existing code from `shuffle-theory`, and some that wasn't published - yet or ever).
 
 ```js
