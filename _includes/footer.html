@@ -2,7 +2,7 @@
   <ul class="center uber">
     {%- for social in site.data.links.socials -%}
     <li>
-      <a href="{{ social.link }}" target="_blank" {% if social.handle %}aria-label="{{ social.handle }}"{% endif %}>
+      <a href="{{ social.link }}" target="_blank" {% if social.handle %}aria-label="{{ social.handle }}" title="{{ social.handle }}"{% endif %}>
         <span class="iconify" data-icon="{{ social.icon }}" data-inline="true"></span>
       </a>
     </li>
