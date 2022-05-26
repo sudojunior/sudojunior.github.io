@@ -2,7 +2,8 @@
 layout: project
 title: Building bridges
 description: A game built by a team of 10 over a weekend at University.
-image: https://ggj.s3.amazonaws.com/styles/game_sidebar__normal/featured_image/2020/02/299202/title_screen_0.png?itok=-FUDHi1K&timestamp=1580660896
+image: /assets/images/building-bridges.png
+thumbnail: /assets/thumbnails/building-bridges.png
 tags: [game-dev, unity]
 created: 2020-02-01
 links:

@@ -2,6 +2,8 @@
 
 ---
 
+@import url(./project-tags.css);
+
 html {
   background-color: #24292e;
   font-family: Roboto Mono, monospace;

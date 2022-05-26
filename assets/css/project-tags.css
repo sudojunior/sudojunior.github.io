@@ -1,0 +1,28 @@
+/* Query container styling */
+
+.project-search {
+  margin: 5px auto;
+  max-width: 800px;
+  padding: 1px 30px;
+}
+
+/* Tag handling */
+.project-tag {
+  margin: 5px;
+  padding: 5px;
+}
+
+.project-tags .project-tag {
+  color: lightseagreen;
+  border-color: chartreuse;
+  text-decoration: dashed;
+}
+
+.project-tag::before {
+  color: grey;
+  content: "#"
+}
+
+.project-tags :has(.project-tag) {
+  list-style-type: none;
+}

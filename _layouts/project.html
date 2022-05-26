@@ -3,7 +3,9 @@ layout: page
 ---
 {% if page.image %}
 <div class="center">
-  <img class="center img-header" src="{{ page.image }}">
+  <a href="{{ page.image | absolute_url }}">
+    <img class="center img-header" src="{{ page.thumbnail | default: page.image }}">
+  </a>
 </div>
 {% endif %}
 

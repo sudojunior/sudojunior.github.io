@@ -3,6 +3,7 @@ layout: project
 title: JaffaCat Factory
 description: A game made for Jingle Jam 2021 over a weekend.
 image: /assets/images/jaffacat-factory-game.png
+thumbnail: /assets/thumbnails/jaffacat-factory-game.png
 tags: [game-dev, unity]
 created: 2021-11-27
 links:

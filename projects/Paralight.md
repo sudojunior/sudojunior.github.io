@@ -3,6 +3,7 @@ layout: project
 title: Paralight
 description: Co-op puzzle adventure game.
 image: /assets/images/paralight-overlook.png
+thumbnail: /assets/thumbnails/paralight-overlook.png
 tags: [game-dev, unity]
 created: 2021-06-01
 links:
