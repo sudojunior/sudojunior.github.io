@@ -7,8 +7,8 @@ description: |
 ---
 
 {% assign projects = site.pages
-| where: "layout", "project"
-| sort_natural %}
+  | where: "layout", "project"
+  | sort: "created" | reverse %}
 
 {% assign project_tags = projects | map: "tags" | uniq | sort_natural %}
 
@@ -31,7 +31,13 @@ description: |
       {% if project.image %}
       <div class="project-image">
         <a href="{{ project.url }}">
-          <img width="100%" src="{{ project.thumbnail | default: project.image }}" alt="{{ project.title }}" />
+          {% assign image_src = project.thumbnail | default: project.image %}
+          {% assign file_ext = image_src | split: "." | reverse | first %}
+          {% if file_ext == "mp4" %}
+            <video class="project-video" src="{{ image_src }}" width="100%" autoplay loop muted></video>
+          {% else %}
+            <img class="project-image" src="{{ image_src }}" width="100%" alt="{{ project.title }}">
+          {% endif %}
         </a>
       </div>
       {% endif %}
@@ -45,8 +51,8 @@ description: |
       <div class="grey">{{ project.created | date_to_string }}</div>
       {% endif %}
       <div class="project-tags">
-        {% for tag in project.tags %}
-        <a class="project-tag" href="#{{ tag }}">{{ tag }}</a>
+        {% for tag in project.tags limit:3 %}
+          <a class="project-tag" href="#{{ tag }}">{{ tag }}</a>
         {% endfor %}
       </div>
     </div>
