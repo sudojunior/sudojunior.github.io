@@ -8,15 +8,37 @@ description: |
 
 {% assign projects = site.pages
   | where: "layout", "project"
-  | sort_natural %}
+  | sort: "created" | reverse %}
+
+{% assign project_tags = projects | map: "tags" | uniq | sort_natural %}
+
+<div class="flex justify-around center">
+  <form onchange="tagSelection(event)">
+    <input type="search" class="project-search" id="search" placeholder="Search for a project..." disabled>
+    <select name="tag" id="project-select" class="project-select">
+      <option value="">All</option>
+      {% for tag in project_tags %}
+      <option class="project-tag" value="{{ tag }}">{{ tag }}</option>
+      {% endfor %}
+    </select>
+  </form>
+</div>
 
 <div class="flex justify-around center">
   {% for project in projects %}
   <article>
-    <div class="project">
+    <div class="project" {% if project.tags %}data-tags="{{ project.tags | join: ','}}" {% endif %}>
       {% if project.image %}
       <div class="project-image">
-        <a href="{{ project.url }}"><img width="100%" src="{{ project.image }}" alt="{{ project.title }}" /></a>
+        <a href="{{ project.url }}">
+          {% assign image_src = project.thumbnail | default: project.image %}
+          {% assign file_ext = image_src | split: "." | reverse | first %}
+          {% if file_ext == "mp4" %}
+            <video class="project-video" src="{{ image_src }}" width="100%" autoplay loop muted></video>
+          {% else %}
+            <img class="project-image" src="{{ image_src }}" width="100%" alt="{{ project.title }}">
+          {% endif %}
+        </a>
       </div>
       {% endif %}
       <div class="project-title">
@@ -28,7 +50,76 @@ description: |
       {% if project.created %}
       <div class="grey">{{ project.created | date_to_string }}</div>
       {% endif %}
+      <div class="project-tags">
+        {% for tag in project.tags limit:3 %}
+          <a class="project-tag" href="#{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
     </div>
   </article>
   {% endfor %}
 </div>
+
+<script>
+  document.onreadystatechange = (e) => {
+    if (document.readyState === 'complete') {
+      const projectTags = document.querySelectorAll('.project-tag');
+      const projectSelect = document.getElementById('project-select');
+      const search = document.getElementById('search');
+
+      let currentTag = projectSelect.value;
+      let currentSearch = search.value;
+
+      const tagSelection = (e) => {
+        const tag = e.target.hash?.slice(1) || e.target.value;
+        const projects = document.querySelectorAll('.project');
+        window.location = `#${tag}`;
+        currentTag = tag;
+
+        projects.forEach((project) => {
+          const projectTags = project.dataset.tags.split(',');
+          if (project.innerText.includes(currentSearch) && (tag === '' || projectTags.includes(tag))) {
+            project.parentElement.style.display = 'block';
+          } else {
+            project.parentElement.style.display = 'none';
+          }
+        });
+      };
+
+      projectTags.forEach((tag) => {
+        tag.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.location.hash = e.target.hash
+          projectSelect.value = e.target.innerText;
+          tagSelection(e);
+        });
+      });
+
+      projectSelect.addEventListener('change', (e) => {
+        tagSelection(e);
+      });
+
+      search.addEventListener('keyup', (e) => {
+        const search = e.target.value.toLowerCase();
+        const projects = document.querySelectorAll('.project');
+        currentSearch = search;
+
+        for (const project of projects) {
+          const project = project.querySelector('.project-title');
+          const projectTitle = project.innerText.toLowerCase();
+          const projectTags = project.dataset.tags.split(',');
+
+          const searchMatch = projectTitle.includes(search) && (currentTag === '' || projectTags.includes(currentTag));
+
+          project.parentElement.style.display = searchMatch ? 'block' : 'none';
+        }
+      });
+
+      const tag = window.location.hash.substring(1);
+      if (tag) {
+        projectSelect.value = tag;
+        tagSelection({ target: { value: tag } });
+      }
+    }
+  }
+</script>

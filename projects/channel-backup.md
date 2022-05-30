@@ -3,6 +3,7 @@ layout: project
 title: Channel Backup
 description: A utility to assist server adminstrators with the consistency of their information channels.
 image: /assets/images/channel-backup-capture.png
+thumbnail: /assets/thumbnails/channel-backup-capture.png
 show_on_homepage: true
 created: 2020-07-15
 tags: [discord, github, slash-commands]
