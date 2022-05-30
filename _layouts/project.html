@@ -4,15 +4,40 @@ layout: page
 {% if page.image %}
 <div class="center">
   <a href="{{ page.image | relative_url }}">
-    <img class="center img-header" src="{{ page.thumbnail | default: page.image }}">
+    {% if page.image %}
+      {% assign image_src = page.thumbnail | default: page.image %}
+      {% assign file_ext = image_src | split: "." | reverse | first %}
+      {% if file_ext == "mp4" %}
+        <video class="project-video img-header" src="{{ image_src }}" autoplay loop muted></video>
+      {% else %}
+        <img class="project-image img-header" src="{{ image_src }}" alt="{{ page.title }}">
+      {% endif %}
+    {% endif %}
   </a>
 </div>
 {% endif %}
 
 {{ content }}
 
+{% comment %}
+{% if page.media %} <!-- page.media[] -->
+  <div class="center">
+  {% for media in page.media %}
+    {% assign image_src = media.image | relative_url %}
+    {% assign file_ext = image_src | split: "." | reverse | first %}
+    {% if file_ext == "mp4" %}
+      <video class="project-video" src="{{ image_src }}" autoplay loop muted></video>
+    {% else %}
+      <img class="project-image" src="{{ image_src }}" alt="{{ page.title }}">
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% endcomment %}
+
+{% if page.links %}
 <div class="flex justify-around center">
   {% for link in page.links %}
   <a href="{{ link.href }}">{{ link.label }}</a>
   {% endfor %}
 </div>
+{% endif %}

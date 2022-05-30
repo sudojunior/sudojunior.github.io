@@ -29,6 +29,13 @@
       <div class="project-description">
         {{ project.description }}
       </div>
+      {% if project.tags %}
+        <div class="project-tags">
+          {% for tag in project.tags %}
+            <a class="project-tag" href="{{ site.baseurl }}/projects/#{{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
       {% if project.created %}
       <div class="grey">{{ project.created | date_to_string }}</div>
       {% endif %}
