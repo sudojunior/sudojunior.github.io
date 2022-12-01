@@ -1,28 +1,26 @@
 ---
 layout: project
 title: Deception
-archived: true
-description: A Discord bot that allows users to play a variation of the game of mafia / werewolf in a text channel.
-created: 2022-12-25
-tags: [discord]
+description: Deception is a bot made as a prototype to manage game lobbies for community servers.
+image: https://video.twimg.com/tweet_video/FHe95LFWQAUQcN3.mp4
+tags: [discord, slash-commands, github, in-progress]
+created: 2021-12-25
 links:
-  - label: Repository Prototype
-    href: https://github.com/TinkerStorm/interaction-prototypes
-  - label: Progress on Twitter
+  - label: Repository
+    href: https://github.com/Tinkerstorm/interaction-prototypes
+  - label: Project Board
+    href: https://github.com/orgs/TinkerStorm/projects/5
+  - label: Progress on Twitter (Moment)
     href: https://twitter.com/i/events/1524808431013609473
 ---
 
-This serves to be the culmination of several projects I have worked on and continue to work on. I had a wild idea to create this bot back in 2018, long before interactions were unveiled - which managed to get a community but ultimately failed to establish itself before it crashed and burned with Discord's policy changes. 2 years after it's demise, I had the idea to revive it under the name 'Deception' - a name that I had been using for a while to refer to the game itself - and embrace the interactions API as a way to create a more streamlined and interactive experience.
+Deception is a bot made as a prototype to manage game lobbies for community servers. It's extended goal is to provide a stepping stone to play the game of Mafia or Werwolf through interactions, and lay the foundations for others to build upon. This is an idea I originally had around 2017, which was abandoned when I needed to focus on other projects. Nevertheless, I've kept the notes I had on my previous attempt and will continue to make progress on it with a component approach instead of a full release plan.
 
-### Development Goals
-
-> This list does not represent the current or final list of features, is subject to change and not guaranteed to be kept up to date with it's actual progress.
-
-- Preset roster gamemodes (Mafia, Werewolf)
-- Interchangeable channel hosts
-  - In active channel - no lobby management, just run the game
-  - In thread - lobby management, run within a channel as it's container
-  - In channel - lobby management, run within a category with a dedicated channels for lobby management; logs; etc.
+<div class="post-content center">
+  <video width="60%" controls>
+    <source src="https://github.com/TinkerStorm/interaction-prototypes/blob/main/assets/lobby-interaction-demo.mp4?raw=true" type="video/mp4">
+  </video>
+</div>
 
 ---
 

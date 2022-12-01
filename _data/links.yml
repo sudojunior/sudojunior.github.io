@@ -34,6 +34,13 @@ socials:
   - handle: /u/sudojunior
     link: https://reddit.com/u/sudojunior
     icon: mdi:reddit
+   
+  - handle: sudojunior
+    link: https://www.linkedin.com/in/sudojunior
+    icon: mdi:linkedin
+  
+  - link: /feed.rss
+    icon: mdi:rss
 
 navbar:
   - label: ./home.sh

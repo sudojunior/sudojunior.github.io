@@ -2,6 +2,8 @@
 
 ---
 
+@import url(./project-tags.css);
+
 html {
   background-color: #24292e;
   font-family: Roboto Mono, monospace;
@@ -147,7 +149,20 @@ nav li a.active {
 /* Grid, Flex & Justify */
 
 .flex {
+  max-width: 1280px;
   display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flex.center {
+  margin: auto;
+}
+
+.flex > * {
+  max-width: 400px;
+  margin: 10px;
 }
 
 .grid {
@@ -175,7 +190,16 @@ img.img-header {
   margin: 0 auto;
   max-width: 500px;
   width: 80%;
-  height: 200px; 
   object-fit: cover;
   object-position: top;
+}
+
+table th {
+  color: cornflowerblue;
+  padding: 10px;
+}
+
+table td {
+  color: tomato;
+  padding: 1px 10px;
 }

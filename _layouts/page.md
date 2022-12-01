@@ -8,6 +8,14 @@ layout: default
       {{- page.title | default: site.title -}}
     </span>
   </h3>
+
+  {% if page.tags %}
+  <div class="project-tags">
+    {% for tag in page.tags %}
+      <a class="project-tag" href="{{ site.baseurl }}/projects/#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
   
   {% if page.description %}
     <p>{{ page.description }}</p>
