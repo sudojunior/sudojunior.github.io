@@ -13,7 +13,7 @@ This post is incomplete, a revised post will unify my findings once I have time 
 
 This post is directly tied to [`shuffle-theory`]({{ site.baseurl }}/projects/shuffle-theory) and its intentions to use ratio based role allocation in mafia games.
 
-There are some complications I should have realised when using floating point numbers, and this refers to the [`IEEE 754`](https://en.wikipedia.org/wiki/IEEE_754) spec that all languages based on C use - meaning it can only cover upto 15 decimal places before the maths gets a little strange. While the code itself is theoretically correct, the runtime was not made to handle that kind of calculation - as shown below with this script (based on existing code from `shuffle-theory`, and some that wasn't published - yet or ever).
+There are some complications I should have realized when using floating point numbers, and this refers to the [`IEEE 754`](https://en.wikipedia.org/wiki/IEEE_754) spec that all languages based on C use - meaning it can only cover up to 15 decimal places before the maths gets a little strange. While the code itself is theoretically correct, the runtime was not made to handle that kind of calculation - as shown below with this script (based on existing code from `shuffle-theory`, and some that wasn't published - yet or ever).
 
 ```js
 import { getPlayers, getRoles, sumBy } from './common';
@@ -32,7 +32,7 @@ for (let i = 6; i <= 20; i++) {
 }
 ```
 
-This is the iteration outcome for 15 players, detailing the relation between the intial ratio and the number of roles requested for the given players. [In testing](https://gist.github.com/sudojunior/429b3309803593c80c55cabf25ec004d) JavaScript (through NodeJS); Python and C#, the following variations occur... *Each is determined by player count, then the difference between the former and the final role count.*
+This is the iteration outcome for 15 players, detailing the relation between the initial ratio and the number of roles requested for the given players. [In testing](https://gist.github.com/sudojunior/429b3309803593c80c55cabf25ec004d) JavaScript (through NodeJS); Python and C#, the following variations occur... *Each is determined by player count, then the difference between the former and the final role count.*
 
 - JavaScript (NodeJS v17.2.0)
 - Python (3.10.0)

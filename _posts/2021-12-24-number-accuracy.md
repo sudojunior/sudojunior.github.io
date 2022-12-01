@@ -14,7 +14,7 @@ This post is incomplete, a revised post will unify my findings once I have time 
 
 This post is a direct follow up of '[Number limits](./2021/12/10/number-limits)' covers the accuracy which C-derived compilers have.
 
-While the intial outlook on this problem was rather hopeless considering it was 'part of the interpreter', some relief can be found when using the standard `Math` rounding methods in their varying capacity. For this set of data, I am using the same set of code snippets with the modified intention to use each method.
+While the initial outlook on this problem was rather hopeless considering it was 'part of the interpreter', some relief can be found when using the standard `Math` rounding methods in their varying capacity. For this set of data, I am using the same set of code snippets with the modified intention to use each method.
 
 > For those wondering if this problem repeats in negative numbers... the short answer is yes.
 
@@ -88,7 +88,7 @@ While the intial outlook on this problem was rather hopeless considering it was 
 
 > Using `floor` or `ceil` in respective languages results in the same values being returned.
 
-With that being said, Python and C# have identical iteration differences... and Rust is just as unreliable as JavaScript when it comes to negative numbers (with a very rare occurance where they cross paths). The solution (or workaround in this case) for needing `{x}` roles for equivelent quantity of players, use `ceil` and slice the array down, _so that you don't have to figure out what else needs to be added_.
+With that being said, Python and C# have identical iteration differences... and Rust is just as unreliable as JavaScript when it comes to negative numbers (with a very rare occurrence where they cross paths). The solution (or workaround in this case) for needing `{x}` roles for equivalent quantity of players, use `ceil` and slice the array down, _so that you don't have to figure out what else needs to be added_.
 
 ## Shared Patterns
 

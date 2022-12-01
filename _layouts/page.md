@@ -12,7 +12,7 @@ layout: default
   {% if page.tags %}
   <div class="project-tags">
     {% for tag in page.tags %}
-      <a class="project-tag" href="{{ site.baseurl }}/projects/#{{ tag }}">{{ tag }}</a>
+      <a class="project-tag" href="{{ site.baseurl }}/projects#{{ tag }}">{{ tag }}</a>
     {% endfor %}
   </div>
   {% endif %}
