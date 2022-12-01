@@ -4,30 +4,35 @@
   {% capture title -%}
   @{{ site.title | downcase }} $ {% if page.title %}{{ page.title | strip_html }}{% endif %}
   {%- endcapture %}
+  {% assign description = page.description | default: page.excerpt | default: site.description %}
 
   <!-- Primary Meta Tags -->
   <title>{{ title }}</title>
 
   <meta name="title" content="{{ title }}">
-  <meta name="description" content="I'm not a tech... stop asking to fix your sh*t.">
+  <meta name="description" content="{{ description | strip_html }}">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:title" content="{{ title }}">
-  <meta property="og:description"
-    content="{{ page.excerpt | default: site.description | strip_html }}">
-  <meta property="og:image"
-    content="https://github.com/{{ site.title | downcase }}.png">
+  <meta property="og:description" content="{{ description | strip_html }}">
+  {% if page.image %}
+  <meta property="og:image" content="{{ page.image | relative_url }}">
+  {% else %}
+  <meta property="og:image" content="https://github.com/{{ site.title | downcase }}.png">
+  {% endif %}
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="{{ site.url }}">
+  <meta property="twitter:url" content="{{ page.url }}">
   <meta property="twitter:title" content="{{ title }}">
-  <meta property="twitter:description"
-    content="{{ page.excerpt | default: site.description | strip_html }}">
-  <meta property="twitter:image"
-    content="https://github.com/{{ site.title | downcase }}.png">
+  <meta property="twitter:description" content="{{ description | strip_html }}">
+  {% if page.image %}
+  <meta property="twitter:image" content="{{ page.image }}">
+  {% else %}
+  <meta property="twitter:image" content="https://github.com/{{ site.title | downcase }}.png">
+  {% endif %}
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
@@ -51,8 +56,8 @@
     <ul>
       {% for el in site.data.links.navbar reversed %}
       <li>
-        <a {% if page.url == el.target %}class="active" {% endif %}
-          href="{{ el.target | absolute_url }}">{{ el.label }}</a>
+        <a {% if page.url==el.target %}class="active" {% endif %} href="{{ el.target | absolute_url }}">{{ el.label
+          }}</a>
       </li>
       {% endfor %}
     </ul>

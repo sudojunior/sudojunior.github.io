@@ -7,7 +7,7 @@ image: /assets/images/tagspace-usage.png
 tags: [discord]
 links:
   - label: Repository
-    href: https://github.com/sudojunior/TagSpace
+    href: https://github.com/RocketDragon/TagSpace
 ---
 
 While the archived code is still quite a mess, the core structure and intentions remain as they were when it was originally created.

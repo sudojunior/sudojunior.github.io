@@ -32,8 +32,8 @@ $themes = Get-ChildItem -Path ~\Documents\WindowsPowerShell\Modules\oh-my-posh\*
   Foreach-Object { $fragment = $_.BaseName.split("."); $fragment[-2..-($fragment.Count)] -join "." }
 
 Register-ArgumentCompleter -CommandName Set-Theme -ParameterName theme -ScriptBlock {
-	param($cmdName, $paramName, $word, $ast, $fakeBounds)
-	$themes | Where-Object { $_ -like "$word*" }
+  param($cmdName, $paramName, $word, $ast, $fakeBounds)
+  $themes | Where-Object { $_ -like "$word*" }
 }
 #endregion
 ```

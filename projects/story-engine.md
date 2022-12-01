@@ -14,6 +14,6 @@ links:
     label: Repository (Bucket Template)
 ---
 
-On one saturday (20th November), I had the bizzare idea to create a narrative engine as a basis to help my team develop their own narrative for Unreal Engine; not only built it, but also wrote the initial documentation - proper weighted branches were added the next day.
+On one saturday (20th November), I had the bizarre idea to create a narrative engine as a basis to help my team develop their own narrative for Unreal Engine; not only built it, but also wrote the initial documentation - proper weighted branches were added the next day.
 
-This 'code jam' is an initative of my own to keep up my programming skills (and possibly learn new aspects along the way). So far, I've achieved about one a month, with all of my findings being published to GitHub (some under MIT, others under GPL - depending on how I intend to take it further).
+This 'code jam' is an initiative of my own to keep up my programming skills (and possibly learn new aspects along the way). So far, I've achieved about one a month, with all of my findings being published to GitHub (some under MIT, others under GPL - depending on how I intend to take it further).

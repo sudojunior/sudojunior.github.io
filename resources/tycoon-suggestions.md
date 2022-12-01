@@ -10,7 +10,7 @@ suggestions:
       With the use of ATC increasing on OS, it would be considerable to see it move out of the chat window so that pilots,
       EMS and staff alike can easily track recent clearance requests and react as needed.
   - date: 2020-07-01
-    header: Adpative crop yield
+    header: Adaptive crop yield
     text: |
       Depending on the weather or time of day, adjust crop yield for farming.
 
@@ -25,7 +25,7 @@ suggestions:
       | Thunderstorm | `2x    |
 
       These are rough numbers, adjust as needed.
-      In theory, more rain would oversaturate crops and reduce yield.
+      In theory, more rain would over-saturate crops and reduce yield.
 
       Weather conditions (as listed by GTA wikia):
       Rain, Sunny/clear, Fog/Mist, Cloudy, Sandstorm, Sunset/sunrise, Snow, Smog
@@ -33,8 +33,10 @@ suggestions:
 
 Below is an archive of suggestions I have *chosen* to archive for my own convenience and future reference.
 
+> As of July 2022, I am no longer an active member of the FiveM Tycoon community. I have archived this page for my own convenience and future reference.
+
 {% for idea in page.suggestions %}
-{% if idea.header %}## {{ idea.header }}{% endif %}
+## {{ idea.header }}
 
 > {{ idea.date | date_to_string: "ordinal", "US" }}
 

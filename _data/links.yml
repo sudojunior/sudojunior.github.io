@@ -19,17 +19,17 @@ socials:
     link: https://twitch.tv/sudojunior
     icon: mdi:twitch
 
-  - # handle: Junior
-    link: https://www.youtube.com/channel/UCY8n396MVrnvZILI0EWjCWA
-    icon: mdi:youtube-gaming
+  #- # handle: Junior
+  #  link: https://www.youtube.com/channel/UCY8n396MVrnvZILI0EWjCWA
+  #  icon: mdi:youtube-gaming
     
   - handle: sudojunior
     link: https://sudojunior.itch.io
     icon: cib:itch-io
     
-  - handle: junior
-    link: https://dev.to/junior
-    icon: mdi:dev-to
+  #- handle: junior
+  #  link: https://dev.to/junior
+  #  icon: mdi:dev-to
     
   - handle: /u/sudojunior
     link: https://reddit.com/u/sudojunior
@@ -48,5 +48,5 @@ navbar:
   - label: ./posts.jekyll
     target: /posts
 
-  - label: ./live.tv
-    target: /live
+  # - label: ./live.tv
+  #   target: /live

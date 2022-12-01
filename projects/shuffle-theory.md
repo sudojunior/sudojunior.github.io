@@ -43,4 +43,4 @@ for (const i in chances)
 // ensuring all chance values are scaled to equal that of 1
 ```
 
-> This eventually turned into [scale-to (NPM)](https://npm.im/scale-to) ([GitHub](https://github.com/TinkerStorm/scale-to)).
+> This eventually turned into [scale-to (NPM)](https://npm.im/scale-to) ([GitHub](https://github.com/TinkerStorm/scale-to))... which failed.

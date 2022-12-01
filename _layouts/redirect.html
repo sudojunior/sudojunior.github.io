@@ -2,7 +2,8 @@
 
 ---
 <!DOCTYPE html>
-{%- assign target = page.redirect_to | absolute_url -%}
+{%- assign target = page.redirect | absolute_url -%}
+{%- assign label = page.label | default: "page" -%}
 {%- assign target_page = site.pages | where: "url",target -%}
 <html>
 
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-  <noscript>Redirect to <a href="{{ target }}">{{ target }}</a></noscript>
+  <noscript>Redirect to <a href="{{ target }}">{{ target }}</a>.</noscript>
   <!-- third -->
 </body>
 <script>
