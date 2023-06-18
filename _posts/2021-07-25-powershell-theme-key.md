@@ -4,9 +4,11 @@ title: Powershell Theme Key
 date: 2021-07-25 17:35:00 +0100
 categories:
 - powershell
+excerpt_separator: <!--more-->
 ---
 
 This is a direct follow up of [the post]({{ site.baseurl }}/2020/07/27/powershell-customization) I wrote on `oh-my-posh` and how I use it, but I will keep this short and only explain the necessary details.
+<!--more-->
 
 ```ps1
 $themePath = "~/Documents/WindowsPowershell/theme"
