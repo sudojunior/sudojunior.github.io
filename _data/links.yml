@@ -49,11 +49,11 @@ navbar:
   # - label: ./about.md
   #   target: /about/
 
-  - label: ./projects.exe
+  - label: ./projects.xml
     target: /projects
   
-  - label: ./posts.jekyll
+  - label: ./posts.rss
     target: /posts
 
-  # - label: ./live.tv
+  # - label: ./live.asf
   #   target: /live
