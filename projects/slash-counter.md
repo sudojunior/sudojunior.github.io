@@ -4,7 +4,7 @@ title: Slash Counter
 description: A Discord bot that gamifies the use of message components... on serverless architecture.
 # image: /assets/images/slash-counter-capture.png
 created: 2022-10-07
-tags: [discord, github, serverless]
+tags: [typescript, discord, github, slash-create, serverless]
 links:
   - label: Invite
     href: https://canary.discord.com/api/oauth2/authorize?client_id=1025693259223269406&permissions=0&scope=applications.commands

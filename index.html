@@ -1,16 +1,13 @@
 ---
-layout: default
+title: ./home.sh
+layout: page
 ---
 <div class="center">
-  <h1 class="prompt"><span class="cmd">{{ site.title | downcase }}</span></h1>
-
-  <p>{{ site.description | markdownify }}</p>
-
-  <h2 class="center">Game Projects</h2>
+  <h2 class="prompt yellow">grep "#game-dev" ./projects</h2>
 
   {% include projects.html tag="game-dev" limit=3 %}
 
-  <h2 class="center">Discord Projects</h2>
+  <h2 class="prompt blue">grep "#discord" ./projects</h2>
 
   {% include projects.html tag="discord" limit=3 %}
 </div>

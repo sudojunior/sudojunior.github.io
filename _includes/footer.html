@@ -1,8 +1,9 @@
-<footer>
-  <ul class="center uber">
+<div class="footer center">
+  <ul class="center large">
     {%- for social in site.data.links.socials -%}
     <li>
-      <a href="{{ social.link }}" target="_blank" {% if social.handle %}aria-label="{{ social.handle }}" title="{{ social.handle }}"{% endif %}>
+      <a href="{{ social.link }}" target="_blank" {% if social.handle %}aria-label="{{ social.handle }}"
+        title="{{ social.handle }}" {% endif %}>
         <span class="iconify" data-icon="{{ social.icon }}" data-inline="true"></span>
       </a>
     </li>
@@ -12,4 +13,4 @@
     Website built with <a href="https://jekyllrb.com">Jekyll</a>, hosted
     by <a href="https://github.com/sudojunior/sudojunior.github.io">GitHub</a>.
   </p>
-</footer>
+</div>

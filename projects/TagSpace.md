@@ -5,7 +5,7 @@ archived: true
 description: A bot to handle tags in user curated namespaces.
 image: /assets/images/tagspace-usage.png
 thumbnail: /assets/thumbnails/tagspace-usage.png
-tags: [discord]
+tags: [javascript, discord]
 links:
   - label: Repository
     href: https://github.com/RocketDragon/TagSpace

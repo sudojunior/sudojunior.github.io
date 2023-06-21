@@ -6,8 +6,8 @@
 
 <div class="flex justify-around center">
   {% assign projects = site.pages
-    | where: "layout", "project" | sort_natural: "title"
-    | where: "tags", include.tag
+    | where: "layout", "project" | where: "tags", include.tag
+    | sort: "created" | reverse
     | where_exp: "page", "page.archived != true"
   %}
 
@@ -31,7 +31,8 @@
       </div>
       {% if project.tags %}
         <div class="project-tags">
-          {% for tag in project.tags %}
+          {% assign tags = project.tags | sample: 3 %}
+          {% for tag in tags %}
             <a class="project-tag" href="{{ site.baseurl }}/projects#{{ tag }}">{{ tag }}</a>
           {% endfor %}
         </div>

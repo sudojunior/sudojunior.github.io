@@ -3,8 +3,9 @@ layout: project
 title: Deserted Office
 description: A game built by a team of 4 over a weekend for Global Game Jam.
 image: https://github.com/sudojunior/GGJ2022_DesertedIsland/raw/main/External/screenshot.png
-tags: [game-dev, ggj, unity]
+tags: [csharp, game-dev, unity]
 created: 2022-02-01
+archived: true
 links:
   - label: Global Game Jam
     href: https://globalgamejam.org/2022/games/deserted-office-4

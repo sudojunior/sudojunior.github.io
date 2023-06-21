@@ -1,19 +1,23 @@
 socials:
-  # - handle: sudojunior#8318
-  #   link: https://discord.com/app
-  #   icon: mdi:discord
+  - handle: sudojunior
+    link: https://discord.gg/Bb3JQQG
+    icon: mdi:discord
   
   - handle: "@sudojunior"
     link: https://github.com/sudojunior
     icon: mdi:github
-  
-  - handle: sudojunior
-    link: https://steamcommunity.com/id/sudojunior
-    icon: mdi:steam
+
+  - handle: "@sudojunior@techhub.social"
+    link: https://techhub.social/@sudojunior
+    icon: mdi:mastodon
 
   - handle: "@SudoJunior"
     link: https://twitter.com/sudojunior
     icon: mdi:twitter
+  
+  - handle: sudojunior
+    link: https://steamcommunity.com/id/sudojunior
+    icon: mdi:steam
 
   - handle: SudoJunior
     link: https://twitch.tv/sudojunior

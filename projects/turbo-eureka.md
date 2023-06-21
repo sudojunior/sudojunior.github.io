@@ -4,7 +4,7 @@ title: Turbo Eureka
 description: A Discord bot to handle message interactions with pattern triggers for user-defined responses.
 image: /assets/images/turbo-eureka-demo.gif
 created: 2022-11-13
-tags: [discord, github, slash-commands]
+tags: [typescript, discord, github, slash-create]
 links:
   - label: Invite
     href: https://canary.discord.com/api/oauth2/authorize?client_id=1041078465274847312&permissions=275683526656&scope=applications.commands%20bot

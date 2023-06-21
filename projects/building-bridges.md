@@ -4,7 +4,7 @@ title: Building bridges
 description: A game built by a team of 10 over a weekend at University.
 image: /assets/images/building-bridges.png
 thumbnail: /assets/thumbnails/building-bridges.png
-tags: [game-dev, ggj, unity]
+tags: [csharp, game-dev, unity]
 created: 2020-02-01
 links:
   - label: Repository

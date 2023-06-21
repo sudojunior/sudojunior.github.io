@@ -1,0 +1,9 @@
+---
+
+---
+
+{% for color in site.data.css_colors %}
+.{{ color.label }} {
+  color: {{ color.code }};
+}
+{% endfor %}

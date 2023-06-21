@@ -1,12 +1,13 @@
 ---
 layout: page
+description: "{description_goes_here}"
 title: ./posts.rss
 ---
-<div class="flex center justify-around">
+<div class="flex center">
   {% for post in site.posts %}
   <article>
     <a href="{{ post.url }}">
-      <h3 class="{% cycle 'red', 'orange' , 'yellow' , 'green' , 'blue' , 'purple' %}"> {{ post.title }}</h3>
+      <h3 class="red"> {{ post.title }}</h3>
     </a>
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url }}">Read more...</a>

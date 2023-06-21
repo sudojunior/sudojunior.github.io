@@ -9,12 +9,11 @@
 /* Tag handling */
 .project-tag {
   margin: 5px;
-  padding: 5px;
+  padding: 5px 0;
 }
 
 .project-tags .project-tag {
   color: lightseagreen;
-  border-color: chartreuse;
   text-decoration: dashed;
 }
 
@@ -25,4 +24,18 @@
 
 .project-tags :has(.project-tag) {
   list-style-type: none;
+}
+
+.project > * {
+  font-size: 10cap;
+}
+
+select {
+  position: relative;
+  width: auto;
+  float: left;
+  max-width: 100%;
+  border-radius: 2px;
+
+  padding: 8px 24px 8px 10px;
 }

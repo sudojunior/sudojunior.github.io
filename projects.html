@@ -3,7 +3,7 @@ layout: page
 title: ./projects.xml
 description: |
   Do I know what I'm doing?
-  <p class="red">Hahaha... no. I haven't the faintest idea.</p>
+  No, but that's no reason for me to not try it anyway.
 ---
 
 {% assign projects = site.pages
@@ -13,30 +13,20 @@ description: |
 {% assign project_tags = projects | map: "tags" | uniq | sort_natural %}
 
 <div class="flex justify-around center">
-  <form onchange="tagSelection(event)">
-    <input type="search" class="project-search" id="search" placeholder="Search for a project..." disabled>
-    <select name="tag" id="project-select" class="project-select">
-      <option value="">All</option>
-      {% for tag in project_tags %}
-      <option class="project-tag" value="{{ tag }}">{{ tag }}</option>
-      {% endfor %}
-    </select>
-  </form>
-</div>
-
-<div class="flex justify-around center">
   {% for project in projects %}
   <article>
-    <div class="project" {% if project.tags %}data-tags="{{ project.tags | join: ','}}" {% endif %}>
+    {% assign archived = project.archived %}
+    <div class="project {% if project.archived %}archived{% endif %}" {% if project.tags
+      %}data-tags="{{ project.tags | join: ','}}" {% endif %}>
       {% if project.image %}
       <div class="project-image">
         <a href="{{ project.url }}">
           {% assign image_src = project.thumbnail | default: project.image %}
           {% assign file_ext = image_src | split: "." | reverse | first %}
           {% if file_ext == "mp4" %}
-            <video class="project-video" src="{{ image_src }}" width="100%" autoplay loop muted></video>
+          <video class="project-video" src="{{ image_src }}" width="100%" autoplay loop muted></video>
           {% else %}
-            <img class="project-image" src="{{ image_src }}" width="100%" alt="{{ project.title }}">
+          <img class="project-image" src="{{ image_src }}" width="100%" alt="{{ project.title }}">
           {% endif %}
         </a>
       </div>
@@ -47,12 +37,15 @@ description: |
       <div class="project-description">
         {{ project.description }}
       </div>
-      {% if project.created %}
-      <div class="grey">{{ project.created | date_to_string }}</div>
-      {% endif %}
+      <div>
+        {% if project.created %}<span class="grey">{{ project.created | date_to_string }}</span>{% endif %}
+        {% if project.created and archived %}|{% endif %}
+        {% if archived %}<span class="yellow">Archived</span>{% endif %}
+      </div>
       <div class="project-tags">
-        {% for tag in project.tags limit:3 %}
-          <a class="project-tag" href="#{{ tag }}">{{ tag }}</a>
+        {% assign tags = project.tags | sample: 3 %}
+        {% for tag in tags %}
+        <a class="project-tag" href="#{{ tag }}">{{ tag }}</a>
         {% endfor %}
       </div>
     </div>
@@ -65,10 +58,8 @@ description: |
     if (document.readyState === 'complete') {
       const projectTags = document.querySelectorAll('.project-tag');
       const projectSelect = document.getElementById('project-select');
-      const search = document.getElementById('search');
 
       let currentTag = projectSelect.value;
-      let currentSearch = search.value;
 
       const tagSelection = (e) => {
         const tag = e.target.hash?.slice(1) || e.target.value;
@@ -78,7 +69,7 @@ description: |
 
         projects.forEach((project) => {
           const projectTags = project.dataset.tags.split(',');
-          if (project.innerText.includes(currentSearch) && (tag === '' || projectTags.includes(tag))) {
+          if ((tag === '' || projectTags.includes(tag))) {
             project.parentElement.style.display = 'block';
           } else {
             project.parentElement.style.display = 'none';
@@ -99,21 +90,21 @@ description: |
         tagSelection(e);
       });
 
-      search.addEventListener('keyup', (e) => {
-        const search = e.target.value.toLowerCase();
-        const projects = document.querySelectorAll('.project');
-        currentSearch = search;
+      //search.addEventListener('keyup', (e) => {
+      //  const search = e.target.value.toLowerCase();
+      //  const projects = document.querySelectorAll('.project');
+      //  currentSearch = search;
 
-        for (const project of projects) {
-          const project = project.querySelector('.project-title');
-          const projectTitle = project.innerText.toLowerCase();
-          const projectTags = project.dataset.tags.split(',');
+      //  for (const project of projects) {
+      //    const project = project.querySelector('.project-title');
+      //    const projectTitle = project.innerText.toLowerCase();
+      //    const projectTags = project.dataset.tags.split(',');
 
-          const searchMatch = projectTitle.includes(search) && (currentTag === '' || projectTags.includes(currentTag));
+      //    const searchMatch = (currentTag === '' || projectTags.includes(currentTag));
 
-          project.parentElement.style.display = searchMatch ? 'block' : 'none';
-        }
-      });
+      //    project.parentElement.style.display = searchMatch ? 'block' : 'none';
+      //  }
+      //});
 
       const tag = window.location.hash.substring(1);
       if (tag) {

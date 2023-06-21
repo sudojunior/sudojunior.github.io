@@ -3,7 +3,7 @@ layout: project
 title: Deception
 description: Deception is a bot made as a prototype to manage game lobbies for community servers.
 image: https://video.twimg.com/tweet_video/FHe95LFWQAUQcN3.mp4
-tags: [discord, slash-commands, github, in-progress]
+tags: [typescript, mafia-game, discord, slash-commands, github]
 created: 2021-12-25
 links:
   - label: Repository

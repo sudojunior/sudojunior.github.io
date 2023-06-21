@@ -1,0 +1,14 @@
+{% assign projects = site.pages
+  | where: "layout", "project"
+  | sort: "created" | reverse %}
+
+{% assign project_tags = projects | map: "tags" | uniq | sort_natural %}
+
+<form onchange="tagSelection(event)">
+  <select name="tag" id="project-select" class="project-select">
+    <option value="">All</option>
+    {% for tag in project_tags %}
+    <option class="project-tag" value="{{ tag }}">#{{ tag }}</option>
+    {% endfor %}
+  </select>
+</form>

@@ -5,7 +5,7 @@ description: A utility to assist server adminstrators with the consistency of th
 image: /assets/images/channel-backup-capture.png
 thumbnail: /assets/thumbnails/channel-backup-capture.png
 created: 2020-07-15
-tags: [discord, github, slash-commands]
+tags: [nodejs, discord, github, slash-commands] # javascript
 links:
   - label: NPM Package
     href: https://npm.im/channel-backup

@@ -1,9 +1,11 @@
 <html>
-  <head profile="https://www.w3.org/2005/10/profile">
+
+<head profile="https://www.w3.org/2005/10/profile">
   {% capture title -%}
-    @{{ site.title | downcase }} $ {% if page.title %}{{ page.title | strip_html }}{% endif %}
+  @{{ site.title | downcase }} $ {% if page.title %}{{ page.title | strip_html }}{% endif %}
   {%- endcapture %}
-  {% assign description = page.excerpt | default: page.description | default: site.description | markdownify | strip_html %}
+  {% assign description = page.excerpt | default: page.description | default: site.description | markdownify |
+  strip_html %}
   {% assign image = page.image | default: site.github.owner_gravatar_url | absolute_url %}
 
   <!-- Primary Meta Tags -->
@@ -55,20 +57,29 @@
 
 <body>
   <nav>
-    <span class="prompt title"><span class="cmd"><b>sudo</b> begin --as junior</span></span>
+    <span class="prompt title"><span class="cmd"><b>sudo</b>junior</span></span>
     <ul>
-      {% for el in site.data.links.navbar reversed %}
+      {%- for social in site.data.links.socials limit: 3 -%}
+      <li class="medium">
+        <a href="{{ social.link }}" target="_blank" {% if social.handle %}aria-label="{{ social.handle }}"
+          title="{{ social.handle }}" {% endif %}>
+          <span class="iconify" data-icon="{{ social.icon }}" data-inline="true"></span>
+        </a>
+      </li>
+      {%- endfor -%}
+      {% for el in site.data.links.navbar %}
       <li>
-        <a {% if page.url == el.target %}class="active" {% endif %} href="{{ el.target | relative_url }}">{{ el.label
-          }}</a>
+        <a {% if page.url==el.target %}class="active" {% endif %} href="{{ el.target | relative_url }}">{{ el.label }}</a>
       </li>
       {% endfor %}
     </ul>
   </nav>
 
-  {{ content }}
+  <main class="container center">
+    {{ content }}
 
-  {% include footer.html %}
+    {% include footer.html %}
+  </main>
 </body>
 
 </html>
