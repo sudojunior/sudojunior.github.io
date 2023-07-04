@@ -17,7 +17,7 @@ layout: default
   {% endif %}
   
   <div class="flex justify-between">
-  {% if page.description or site.description %}
+  {% if page.description or site.description and page.layout != "post" %}
     <p>{{ page.description | default: site.description | markdownify }}</p>
   {% endif %}
 
