@@ -11,9 +11,9 @@ socials:
     link: https://techhub.social/@sudojunior
     icon: mdi:mastodon
 
-  - handle: "@SudoJunior"
-    link: https://twitter.com/sudojunior
-    icon: mdi:twitter
+  #- handle: "@SudoJunior"
+  #  link: https://twitter.com/sudojunior
+  #  icon: mdi:twitter
   
   - handle: sudojunior
     link: https://steamcommunity.com/id/sudojunior
@@ -35,9 +35,9 @@ socials:
   #  link: https://dev.to/junior
   #  icon: mdi:dev-to
     
-  - handle: /u/sudojunior
-    link: https://reddit.com/u/sudojunior
-    icon: mdi:reddit
+  #- handle: /u/sudojunior
+  #  link: https://reddit.com/u/sudojunior
+  #  icon: mdi:reddit
    
   - handle: sudojunior
     link: https://www.linkedin.com/in/sudojunior
