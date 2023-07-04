@@ -7,7 +7,7 @@ categories: fivem
 
 Specifically for windows (and linux subsystem if you want to use it), other operating systems may behave differently.
 
-*This guide was written for those that may have been unable to use [gta5view](https://lmgtfy.com/?q=gta5view).*
+*This guide was written for those that may have been unable to use [gta5view](https://google.com/search?q=gta5view).*
 
 1. Take a photo as you normally would... or many.
 2. Close the game when you want to look at the photos.
