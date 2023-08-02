@@ -194,6 +194,10 @@ nav li a.active {
   flex-wrap: wrap;
 }
 
+.flex :has(.project) {
+  align-items: end;
+}
+
 .flex.center {
   margin: auto;
 }

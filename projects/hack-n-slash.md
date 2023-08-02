@@ -9,8 +9,8 @@ tags: [typescript, discord, github, slash-create]
 links:
   - label: Repository
     href: https://github.com/sudojunior/hack-n-slash
-  - label: Service Invite
-    href: https://discord.com/api/oauth2/authorize?client_id=891363778808152125&permissions=0&scope=bot%20applications.commands
+  #- label: Service Invite
+  #  href: https://discord.com/api/oauth2/authorize?client_id=891363778808152125&permissions=0&scope=bot%20applications.commands
   - label: Support (TinkerStorm)
     href: https://discord.gg/Bb3JQQG
 ---

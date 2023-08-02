@@ -4,6 +4,7 @@ title: Discord - Color of the Day
 description: A Discord bot that changes a server's color role to a random color every day.
 # image: /assets/images/discord-cotd-capture.png
 created: 2022-09-11
+show_on_homepage: false
 tags: [typescript, discord, github] # github-actions
 links:
   - label: Repository

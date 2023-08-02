@@ -15,7 +15,6 @@ description: |
 <div class="flex justify-around center">
   {% for project in projects %}
   <article>
-    {% assign archived = project.archived %}
     <div class="project {% if project.archived %}archived{% endif %}" {% if project.tags
       %}data-tags="{{ project.tags | join: ','}}" {% endif %}>
       {% if project.image %}
@@ -39,8 +38,8 @@ description: |
       </div>
       <div>
         {% if project.created %}<span class="grey">{{ project.created | date_to_string }}</span>{% endif %}
-        {% if project.created and archived %}|{% endif %}
-        {% if archived %}<span class="yellow">Archived</span>{% endif %}
+        {% if project.created and project.archived %}|{% endif %}
+        {% if project.archived %}<span class="yellow">Archived</span>{% endif %}
       </div>
       <div class="project-tags">
         {% assign tags = project.tags | sample: 3 %}

@@ -3,6 +3,7 @@ layout: project
 title: slash-create Docs Bot
 description: A documentation bot built using slash-create for its documentation.
 created: 2022-07-13
+image: /assets/images/slash-create-docs-bot-capture.png
 tags: [typescript, discord, github, slash-create]
 links: 
   - label: Repository

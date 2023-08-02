@@ -6,7 +6,7 @@ image: https://img.itch.zone/aW1nLzg4ODg0MjYucG5n/315x250%23c/Bl4G9D.png
 tags: [ue4, game-dev]
 created: 2022-05-23
 links: 
-  - label: Itch.io
+  - label: itch.io
     href: https://galacticrabstudio.itch.io/coffee-with-cryptids
 ---
 

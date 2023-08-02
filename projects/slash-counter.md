@@ -2,7 +2,7 @@
 layout: project
 title: Slash Counter
 description: A Discord bot that gamifies the use of message components... on serverless architecture.
-# image: /assets/images/slash-counter-capture.png
+image: /assets/images/slash-counter-capture.png
 created: 2022-10-07
 tags: [typescript, discord, github, slash-create, serverless]
 links:

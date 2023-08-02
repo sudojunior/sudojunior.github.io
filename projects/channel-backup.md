@@ -22,5 +22,6 @@ Originally made for a friend, which was also used to maintain consistency for ev
 There are plans to expand the base functions of this utility, and to add more features to it. Most notably is the ability to construct plugins that can be used to add more functionality. There is a possibility to further expand this package as a service which can listen for component interactions.
 
 In-house environment demos can be found below:
+
 - [TinkerStorm/community](https://github.com/TinkerStorm/community)
 - [TinkerStorm/discord-markdown-syntax](https://github.com/TinkerStorm/discord-markdown-syntax)
