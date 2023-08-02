@@ -194,7 +194,7 @@ nav li a.active {
   flex-wrap: wrap;
 }
 
-.flex :has(.project) {
+.flex:has( .project) {
   align-items: end;
 }
 
