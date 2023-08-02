@@ -8,7 +8,8 @@
   {% assign projects = site.pages
     | where: "layout", "project" | where: "tags", include.tag
     | sort: "created" | reverse
-    | where_exp: "page", "page.archived != true and page.show_on_homepage != false"
+    | where_exp: "page", "page.archived != true"
+    | where_exp: "page", "page.show_on_homepage != false"
   %}
 
   {% for project in projects limit:3 %}
