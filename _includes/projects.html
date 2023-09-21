@@ -39,6 +39,7 @@
           {% endif %}
           {% assign tags = project.tags | sample: tag_count %}
           {% for tag in tags %}
+            {% if tag == include.tag %}{% continue %}{% endif %}
             <a class="project-tag" href="{{ site.baseurl }}/projects#{{ tag }}">{{ tag }}</a>
           {% endfor %}
         </div>
