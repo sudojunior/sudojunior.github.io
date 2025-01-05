@@ -51,7 +51,7 @@ The `$themePath` variable is set to the userprofile home (`~`) by default, but c
 
 ## Word of warning with OneDrive
 
-<img style="float: right;" src="https://i.imgur.com/gK7wYTg.png"/>
+<img style="float: right;" src="{{ site.baseurl }}/assets/images/onedrive-permissions-issue.png"/>
 
 *Specifically the Enterprise edition, Personal OneDrive (or SkyDrive as I've seen it named) did not have this problem as folder sync was disabled beforehand - but is likely to experience a similar conflict.*
 
