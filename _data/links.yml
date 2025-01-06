@@ -2,10 +2,14 @@ socials:
   - handle: sudojunior
     link: https://discord.gg/Bb3JQQG
     icon: mdi:discord
-  
+
   - handle: "@sudojunior"
     link: https://github.com/sudojunior
     icon: mdi:github
+
+  - handle: "sudojunior.bsky.social"
+    href: https://bsky.app/profile/sudojunior.bsky.social
+    icon: simple-icons:bluesky
 
   - handle: "@sudojunior@techhub.social"
     link: https://techhub.social/@sudojunior
@@ -14,7 +18,7 @@ socials:
   #- handle: "@SudoJunior"
   #  link: https://twitter.com/sudojunior
   #  icon: mdi:twitter
-  
+
   - handle: sudojunior
     link: https://steamcommunity.com/id/sudojunior
     icon: mdi:steam
@@ -26,23 +30,23 @@ socials:
   #- # handle: Junior
   #  link: https://www.youtube.com/channel/UCY8n396MVrnvZILI0EWjCWA
   #  icon: mdi:youtube-gaming
-    
+
   - handle: sudojunior
     link: https://sudojunior.itch.io
     icon: cib:itch-io
-    
+
   #- handle: junior
   #  link: https://dev.to/junior
   #  icon: mdi:dev-to
-    
+
   #- handle: /u/sudojunior
   #  link: https://reddit.com/u/sudojunior
   #  icon: mdi:reddit
-   
+
   - handle: sudojunior
     link: https://www.linkedin.com/in/sudojunior
     icon: mdi:linkedin
-  
+
   - link: /feed.rss
     icon: mdi:rss
 
@@ -55,7 +59,7 @@ navbar:
 
   - label: ./projects.xml
     target: /projects
-  
+
   - label: ./posts.rss
     target: /posts
 
