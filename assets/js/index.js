@@ -46,6 +46,9 @@ function runCommand(event, $el) {
 }
 
 window.onload = (e) => {
+  // Only run type animations on main page.
+  if (window.location.pathname !== '/') return;
+
   let cmdElements = document.getElementsByClassName("cmd");
 
   for (let i = 0; i < cmdElements.length; i++) {
