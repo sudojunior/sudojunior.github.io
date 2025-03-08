@@ -9,7 +9,7 @@
 {% assign asset_path = includes.thumbnail | default: includes.image | relative_url %}
 
 <a href="{{ includes.image | relative_url }}">
-  <img src="{{ includes.thumbnail | default: includes.image | relative_url }}"
+  <img loading="lazy" src="{{ includes.thumbnail | default: includes.image | relative_url }}"
     {%- if includes.alt %} alt="{{ includes.alt }}"{% endif -%}
     {%- if includes.title %} title="{{ includes.title }}"{% endif -%} />
 </a>
