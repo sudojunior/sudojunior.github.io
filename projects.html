@@ -17,6 +17,7 @@ description: |
   <article>
     <div class="project {% if project.archived %}archived{% endif %}" {% if project.tags
       %}data-tags="{{ project.tags | join: ','}}" {% endif %}>
+      {% comment %}
       {% if project.image %}
       <div class="project-image">
         <a href="{{ project.url }}">
@@ -30,6 +31,7 @@ description: |
         </a>
       </div>
       {% endif %}
+      {% endcomment %}
       <div class="project-title">
         <a href="{{ project.url }}">{{ project.title }}</a>
       </div>
