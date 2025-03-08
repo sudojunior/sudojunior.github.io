@@ -2,12 +2,16 @@
 title: ./home.sh
 layout: page
 ---
-<div class="center">
-  <h2 class="prompt yellow">grep "#game-dev" ./projects</h2>
+<div class="flex">
+  <div>
+    <h2 class="prompt yellow">grep "#game-dev" ./projects</h2>
 
-  {% include projects.html tag="game-dev" limit=3 %}
+    {% include projects.html tag="game-dev" limit=3 %}
+  </div>
 
-  <h2 class="prompt blue">grep "#discord" ./projects</h2>
+  <div>
+    <h2 class="prompt blue">grep "#discord" ./projects</h2>
 
-  {% include projects.html tag="discord" limit=3 %}
+    {% include projects.html tag="discord" limit=3 %}
+  </div>
 </div>

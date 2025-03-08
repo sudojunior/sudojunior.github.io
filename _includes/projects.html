@@ -6,7 +6,7 @@
 
 {% if include.tag %}{% assign tag_count = 2 %}{% else %}{% assign tag_count = 3 %}{% endif %}
 
-<div class="flex justify-around center">
+<div class="flex flex-column">
   {% assign projects = site.pages
     | where: "layout", "project" | where: "tags", include.tag
     | sort: "created" | reverse
@@ -15,7 +15,7 @@
   %}
 
   {% for project in projects limit:3 %}
-  <article>
+  <article class="baseline">
     <div class="project">
       {% comment %}
       {% if project.image %}

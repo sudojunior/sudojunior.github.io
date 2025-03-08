@@ -15,10 +15,12 @@ layout: default
     {% endfor %}
   </div>
   {% endif %}
-  
+
   <div class="flex justify-between">
   {% if page.description or site.description and page.layout != "post" %}
-    <p>{{ page.description | default: site.description | markdownify }}</p>
+    <div class="center" style="width: 600px; margin: auto;">
+      {{ page.description | default: site.description | markdownify }}
+    </div>
   {% endif %}
 
   {% if page.url == "/projects" %}
