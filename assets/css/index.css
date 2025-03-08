@@ -186,12 +186,20 @@ nav li a.active {
   align-self: center;
 }
 
+.vertical-align.vertical-center {
+  vertical-align: center;
+}
+
 .flex {
   max-width: 1280px;
   display: flex;
   justify-content: space-evenly;
   align-content: space-around;
   flex-wrap: wrap;
+}
+
+.flex.left {
+  justify-content: unset;
 }
 
 .flex:has( .project) {
@@ -208,6 +216,10 @@ nav li a.active {
 
 .flex article {
   max-width: 400px;
+}
+
+div > :has(article) {
+  margin-top: 5vh;
 }
 
 .grid {

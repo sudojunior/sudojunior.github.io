@@ -3,14 +3,17 @@ layout: page
 description: "For solutions which may not always be on hand, as if it were pen and paper."
 title: ./posts.rss
 ---
-<div class="flex center">
+<div {% comment %} class="flex" {% endcomment %}>
   {% for post in site.posts %}
   <article>
-    <a href="{{ post.url }}">
-      <h3 class="red"> {{ post.title }}</h3>
+    <a href="{{ post.url }}" class="flex left">
+      <div class="small">{{ post.date | date: "%b %d %Y" }}</div>
+      <h3 class="small red">{{ post.title }}</h3>
     </a>
+    {% comment %}
     <p>{{ post.excerpt }}</p>
     <a href="{{ post.url }}">Read more...</a>
+    {% endcomment %}
   </article>
   {% endfor %}
 </div>

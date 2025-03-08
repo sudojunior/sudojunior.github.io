@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Extracting images from your FiveM phone camera (7)"
+title: "Extracting images from your FiveM phone camera"
 date: 2020-08-19 18:15:00 +0100
 categories: fivem
 ---
@@ -11,14 +11,14 @@ Specifically for windows (and linux subsystem if you want to use it), other oper
 
 1. Take a photo as you normally would... or many.
 2. Close the game when you want to look at the photos.
-3. Navigate to `%USERPROFILE%\Saved Games\CitizenFX\GTA5`.  
+3. Navigate to `%USERPROFILE%\Saved Games\CitizenFX\GTA5`.
   *You can do this using Win+R, Cortana, Explorer address bar or a cmd prompt (WinCmd will accept `explorer.exe` with a direct path, Powershell will use `Invoke-Item` or `ii` with similar syntax).*
-4. Copy or cut all files prefixed with `PGTA5...` into a another folder to make sure that the game remains unaffected.
-5. Rename all copied files to have a `.jpg` extension. This can be done manually or using a command script.
+1. Copy or cut all files prefixed with `PGTA5...` into a another folder to make sure that the game remains unaffected.
+2. Rename all copied files to have a `.jpg` extension. This can be done manually or using a command script.
   - WinCmd: `ren * *.jpg`
-  - Powershell: `Get-ChildItem | Rename-Item -NewName { $_.name + ".jpg" }`  
+  - Powershell: `Get-ChildItem | Rename-Item -NewName { $_.name + ".jpg" }`
     *replace Get-ChildItem with ls, no change except the alias used*
-  - bash / shell: `mmv "*" "#1.jpg"`  
+  - bash / shell: `mmv "*" "#1.jpg"`
     *use `sudo apt install mmv` before running*
 
 Thumbnails won't appear in regular explorer as they haven't been generated, Irfanview or Photos will do that just fine.

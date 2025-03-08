@@ -17,6 +17,7 @@
   {% for project in projects limit:3 %}
   <article>
     <div class="project">
+      {% comment %}
       {% if project.image %}
         {% assign image_src = project.thumbnail | default: project.image %}
         {% assign file_ext = image_src | split: "." | reverse | first %}
@@ -26,6 +27,7 @@
           <img class="project-image" src="{{ image_src }}" width="100%" alt="{{ project.title }}">
         {% endif %}
       {% endif %}
+      {% endcomment %}
       <div class="project-title">
         <a href="{{ project.url }}">{{ project.title }}</a>
       </div>

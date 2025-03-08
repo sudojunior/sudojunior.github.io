@@ -15,14 +15,14 @@ suggestions:
       Depending on the weather or time of day, adjust crop yield for farming.
 
       ### Crop yield scale:
-      
+
       |      Weather | Scale  |
       | ------------:| ------ |
       |        Clear | `?x`   |
       |     Overcast | `0.8x` |
       | Light Shower | `1.2x` |
       | Heavy Shower | `1.5x` |
-      | Thunderstorm | `2x    |
+      | Thunderstorm | `2x`   |
 
       These are rough numbers, adjust as needed.
       In theory, more rain would over-saturate crops and reduce yield.
