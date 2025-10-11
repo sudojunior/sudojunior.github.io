@@ -8,7 +8,7 @@ socials:
     icon: mdi:github
 
   - handle: "sudojunior.bsky.social"
-    href: https://bsky.app/profile/sudojunior.bsky.social
+    link: https://bsky.app/profile/sudojunior.bsky.social
     icon: simple-icons:bluesky
 
   - handle: "@sudojunior@techhub.social"
