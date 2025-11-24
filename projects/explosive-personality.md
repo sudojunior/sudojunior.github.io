@@ -2,7 +2,7 @@
 layout: project
 title: Explosive Personality
 description: As if it wasn't hard enough to defend your factory.
-tags: [factorio, lua, github]
+tags: [factorio, lua, github, game-dev]
 created: 2025-11-02
 links:
   - label: Mod Portal
